@@ -3,6 +3,9 @@ package com.ecnu.dfa;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * @author CaoZiyu
+ */
 public class FA {
     private ArrayList<State> states;
 

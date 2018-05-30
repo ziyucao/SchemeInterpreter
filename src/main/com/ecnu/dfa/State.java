@@ -2,6 +2,9 @@ package com.ecnu.dfa;
 
 import java.util.LinkedList;
 
+/**
+ * @author CaoZiyu
+ */
 public class State {
     private int stateNumber;
     private boolean isAcceptedState;

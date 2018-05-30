@@ -1,5 +1,8 @@
 package com.ecnu.dfa;
 
+/**
+ * @author CaoZiyu
+ */
 public class Transition {
     
     private int fromState;

@@ -2,6 +2,9 @@ package com.ecnu.dfa;
 
 import java.util.Comparator;
 
+/**
+ * @author CaoZiyu
+ */
 public class StateComparator implements Comparator<State> {
 
     @Override

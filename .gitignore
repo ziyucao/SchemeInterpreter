@@ -1,3 +1,4 @@
 out/
 .vscode/
+.idea/workspace.xml
 .idea/junitgenerator-prj-settings.xml
