@@ -1,4 +1,4 @@
-package basic;
+package com.ecnu.basic;
 
 public class Token
 {

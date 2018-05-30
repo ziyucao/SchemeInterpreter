@@ -1,4 +1,4 @@
-package pre;
+package com.ecnu.pre;
 
 import java.util.ArrayList;
 
@@ -8,10 +8,13 @@ public class PreProcessor {
     {
         //deal with comments
         String noComment = input.split(";")[0];
+        if (noComment == null || noComment.equals("")) {
+            return new ArrayList();
+        }
 
         //deal with "(" and ")" and split to tokens
-        String replaceLeftParenthese = noComment.replaceAll("(", " ( ");
-        String replaceRightParenthese = replaceLeftParenthese.replaceAll(")", " ) ");
+        String replaceLeftParenthese = noComment.replaceAll("\\(", " ( ");
+        String replaceRightParenthese = replaceLeftParenthese.replaceAll("\\)", " ) ");
         String[] tokens = replaceRightParenthese.split("\n|\r|\t| ");
 
         //delete empty strings in "tokens"

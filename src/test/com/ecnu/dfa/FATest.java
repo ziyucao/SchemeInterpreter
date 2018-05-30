@@ -1,6 +1,7 @@
 package com.ecnu.dfa;
 
-import org.junit.Test; 
+import org.junit.Assert;
+import org.junit.Test;
 import org.junit.Before; 
 import org.junit.After; 
 
@@ -14,7 +15,8 @@ import org.junit.After;
 public class FATest { 
 
 @Before
-public void before() throws Exception { 
+public void before() throws Exception {
+
 } 
 
 @After
@@ -23,23 +25,21 @@ public void after() throws Exception {
 
 /** 
 * 
-* Method: addState(State s) 
+* 确定fa中states按照stateNumber升序
 * 
 */ 
 @Test
-public void testAddState() throws Exception { 
-//TODO: Test goes here... 
-} 
-
-/** 
-* 
-* Method: getState(int StateNumber) 
-* 
-*/ 
-@Test
-public void testGetState() throws Exception { 
-//TODO: Test goes here... 
-} 
-
+public void if_state_added_is_in_ascending_order_of_state_number() throws Exception {
+    FA fa = new FA();
+    State s0 = new State(0, false);
+    State s2 = new State(2, false);
+    State s1 = new State(1, false);
+    fa.addState(s0);
+    fa.addState(s2);
+    fa.addState(s1);
+    Assert.assertEquals(s0.getStateNumber(), fa.getState(0).getStateNumber());
+    Assert.assertEquals(s1.getStateNumber(), fa.getState(1).getStateNumber());
+    Assert.assertEquals(s2.getStateNumber(), fa.getState(2).getStateNumber());
+}
 
 } 

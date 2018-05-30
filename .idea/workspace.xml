@@ -2,16 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b7d66578-d7a9-4b25-aa1d-25b48d3941b5" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SchemeInterpreter.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SchemeInterpreter.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ecnu/Main.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ecnu/basic/Token.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ecnu/basic/Type.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ecnu/dfa/FA.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ecnu/dfa/State.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ecnu/dfa/StateComparator.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ecnu/dfa/Transition.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/ecnu/pre/PreProcessor.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/ecnu/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/ecnu/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/ecnu/basic/Token.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/ecnu/basic/Token.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/ecnu/basic/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/ecnu/basic/Type.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/ecnu/dfa/StateComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/ecnu/dfa/StateComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/com/ecnu/pre/PreProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/com/ecnu/pre/PreProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/com/ecnu/dfa/FATest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/com/ecnu/dfa/FATest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,24 +20,39 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/SchemeInterpreter$All_in_SchemeInterpreter.ic" NAME="All in SchemeInterpreter Coverage Results" MODIFIED="1527681926569" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="ExportTestResults" outputFolder="$USER_HOME$/Desktop" openResultsInEditor="true" userTempatePath="" />
+  <component name="FavoritesManager">
+    <favorites_list name="SchemeInterpreter" />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="FA.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/dfa/FA.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="76">
-              <caret line="5" column="14" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="15" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FATest.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/com/ecnu/dfa/FATest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
+            <state relative-caret-position="209">
+              <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
               <folding>
-                <element signature="imports" expanded="true" />
+                <element signature="e#146#147#0" expanded="true" />
+                <element signature="e#188#189#0" expanded="true" />
+                <element signature="e#362#363#0" expanded="true" />
+                <element signature="e#413#414#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,8 +61,71 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
+            <state relative-caret-position="228">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="State.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/dfa/State.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Type.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/basic/Type.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="38">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PreProcessor.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/pre/PreProcessor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="494">
+              <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StateComparator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/dfa/StateComparator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Transition.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/dfa/Transition.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-85">
+              <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+              <folding>
+                <element signature="e#358#359#0" expanded="true" />
+                <element signature="e#377#378#0" expanded="true" />
+                <element signature="e#759#760#0" expanded="true" />
+                <element signature="e#780#781#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FATest.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/com/ecnu/dfa/FATest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -78,7 +155,13 @@
         <option value="$PROJECT_DIR$/src/dfa/FA.java" />
         <option value="$PROJECT_DIR$/src/java/ecnu/dfa/FA.java" />
         <option value="$PROJECT_DIR$/src/com/ecnu/dfa/FA.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/com/ecnu/dfa/StateComparator.java" />
         <option value="$PROJECT_DIR$/src/test/com/ecnu/dfa/FATest.java" />
+        <option value="$PROJECT_DIR$/src/main/com/ecnu/basic/Type.java" />
+        <option value="$PROJECT_DIR$/src/main/com/ecnu/basic/Token.java" />
+        <option value="$PROJECT_DIR$/src/main/com/ecnu/pre/PreProcessor.java" />
+        <option value="$PROJECT_DIR$/src/main/com/ecnu/Main.java" />
       </list>
     </option>
   </component>
@@ -87,6 +170,12 @@
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
   </component>
   <component name="NodePackageJsonFileManager">
     <packageJsonPaths />
@@ -143,7 +232,23 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="ecnu" type="462c0819:PsiDirectoryNode" />
+              <item name="basic" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchemeInterpreter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchemeInterpreter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="ecnu" type="462c0819:PsiDirectoryNode" />
               <item name="dfa" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchemeInterpreter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchemeInterpreter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="ecnu" type="462c0819:PsiDirectoryNode" />
+              <item name="pre" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchemeInterpreter" type="b2602c69:ProjectViewProjectNode" />
@@ -180,7 +285,7 @@
     <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="plugins.junitgenerator.application" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -316,7 +421,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.All in SchemeInterpreter">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
@@ -327,6 +432,46 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration name="All in SchemeInterpreter" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SchemeInterpreter" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="package" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration name="FATest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="SchemeInterpreter" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.ecnu.dfa.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" value="com.ecnu.dfa" />
+      <option name="MAIN_CLASS_NAME" value="com.ecnu.dfa.FATest" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
     </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -366,6 +511,17 @@
       <properties />
       <listeners />
     </configuration>
+    <list>
+      <item itemvalue="Application.Main" />
+      <item itemvalue="JUnit.FATest" />
+      <item itemvalue="JUnit.All in SchemeInterpreter" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.All in SchemeInterpreter" />
+        <item itemvalue="JUnit.FATest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -379,7 +535,7 @@
       <updated>1526989174651</updated>
       <workItem from="1526989175885" duration="707000" />
       <workItem from="1527674539143" duration="554000" />
-      <workItem from="1527675118355" duration="2294000" />
+      <workItem from="1527675118355" duration="7611000" />
     </task>
     <task id="LOCAL-00001" summary="FA部分实现">
       <created>1527676417411</created>
@@ -388,11 +544,57 @@
       <option name="project" value="LOCAL" />
       <updated>1527676417411</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Junit test">
+      <created>1527677712220</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1527677712220</updated>
+    </task>
+    <task id="LOCAL-00003" summary="fix directory">
+      <created>1527677909755</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1527677909755</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="FATest - 2018.05.30 at 19h 39m 32s.xml">
+      <configuration name="FATest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FATest - 2018.05.30 at 19h 42m 26s.xml">
+      <configuration name="FATest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FATest - 2018.05.30 at 19h 43m 38s.xml">
+      <configuration name="FATest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FATest - 2018.05.30 at 19h 43m 58s.xml">
+      <configuration name="FATest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FATest - 2018.05.30 at 19h 44m 19s.xml">
+      <configuration name="FATest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FATest - 2018.05.30 at 19h 44m 24s.xml">
+      <configuration name="FATest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FATest - 2018.05.30 at 19h 50m 37s.xml">
+      <configuration name="FATest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="FATest - 2018.05.30 at 19h 58m 47s.xml">
+      <configuration name="FATest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_SchemeInterpreter - 2018.05.30 at 20h 04m 52s.xml">
+      <configuration name="All in SchemeInterpreter" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="All_in_SchemeInterpreter - 2018.05.30 at 20h 05m 28s.xml">
+      <configuration name="All in SchemeInterpreter" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3555000" />
+    <option name="totallyTimeSpent" value="8872000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -408,23 +610,24 @@
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32992125" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32913387" />
       <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32962668" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32992125" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.32913387" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32834646" />
+      <window_info anchor="right" id="Coverage" side_tool="true" visible="true" weight="0.26250994" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2533757" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.75263774" visible="true" weight="0.2533757" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32962668" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.24963397" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info id="Structure" order="1" sideWeight="0.24736226" side_tool="true" visible="true" weight="0.2533757" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.24980143" />
       <window_info id="UI Designer" order="2" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info id="Favorites" order="2" sideWeight="0.50058615" side_tool="true" weight="0.2533757" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -472,7 +675,13 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="FA部分实现" />
-    <option name="LAST_COMMIT_MESSAGE" value="FA部分实现" />
+    <MESSAGE value="Junit test" />
+    <MESSAGE value="fix directory" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix directory" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
@@ -555,9 +764,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ecnu/dfa/StateComparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -572,9 +778,6 @@
           <caret line="15" column="7" lean-forward="true" selection-start-line="15" selection-start-column="7" selection-end-line="15" selection-end-column="7" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/ecnu/dfa/FA.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -591,27 +794,91 @@
     <entry file="file://$PROJECT_DIR$/src/main/test/com/ecnu/dfa/FATest.java">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/Main.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        <state relative-caret-position="38">
+          <caret line="2" column="37" lean-forward="true" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/junitgenerator-prj-settings.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/com/ecnu/dfa/FATest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="33" column="35" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/basic/Type.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/basic/Token.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="4" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/dfa/Transition.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-85">
+          <caret line="3" column="4" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding>
+            <element signature="e#358#359#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#759#760#0" expanded="true" />
+            <element signature="e#780#781#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/dfa/StateComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/dfa/State.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/dfa/FA.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="14" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="15" />
+        <state relative-caret-position="209">
+          <caret line="12" column="35" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding>
+            <element signature="e#146#147#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#362#363#0" expanded="true" />
+            <element signature="e#413#414#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/com/ecnu/dfa/FATest.java">
+    <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="2" lean-forward="true" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="228">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/com/ecnu/pre/PreProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="9" lean-forward="true" selection-start-line="26" selection-start-column="9" selection-end-line="26" selection-end-column="9" />
         </state>
       </provider>
     </entry>
