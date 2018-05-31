@@ -1,6 +1,10 @@
 package com.ecnu.basic;
 
 public enum Type {
-    Indentifier,
+    Identifier,
+    Number,
+    String,
+    Quoted,
+    Parenthesis,
     
 }
