@@ -15,11 +15,11 @@ public class FA {
 
     public void addState(State s) {
         this.states.add(s);
-        Collections.sort(states, new StateComparator());
+        states.sort(new StateComparator());
     }
 
-    public State getState(int StateNumber) {
-        return this.states.get(StateNumber);
+    public State getState(int stateNumber) {
+        return this.states.get(stateNumber);
     }
 
 
