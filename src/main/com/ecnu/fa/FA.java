@@ -7,7 +7,16 @@ import java.util.Collections;
  * @author CaoZiyu
  */
 public class FA {
+
     private ArrayList<State> states;
+
+    public ArrayList<State> getStates() {
+        return states;
+    }
+
+    public void setStates(ArrayList<State> states) {
+        this.states = states;
+    }
 
     public FA(){
         states = new ArrayList<>();
@@ -15,11 +24,11 @@ public class FA {
 
     public void addState(State s) {
         this.states.add(s);
-        Collections.sort(states, new StateComparator());
+        states.sort(new StateComparator());
     }
 
-    public State getState(int StateNumber) {
-        return this.states.get(StateNumber);
+    public State getState(int stateNumber) {
+        return this.states.get(stateNumber);
     }
 
     public void print()

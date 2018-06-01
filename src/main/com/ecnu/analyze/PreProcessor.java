@@ -1,7 +1,10 @@
-package com.ecnu.pre;
+package com.ecnu.analyze;
 
 import java.util.ArrayList;
 
+/**
+ * @author ddl
+ */
 public class PreProcessor {
 
     public static ArrayList preProcess(String input)
