@@ -12,7 +12,7 @@ import java.util.LinkedList;
  *
  * @author CaoZiyu
  * @version 1.0
- * @since <pre>May 30, 2018</pre>
+ * @since <analyze>May 30, 2018</analyze>
  */
 public class StateTest
 {

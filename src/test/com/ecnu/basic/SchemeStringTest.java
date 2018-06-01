@@ -10,7 +10,7 @@ import org.junit.After;
  *
  * @author CaoZiyu
  * @version 1.0
- * @since <pre>June 1, 2018</pre>
+ * @since <analyze>June 1, 2018</analyze>
  */
 public class SchemeStringTest {
 
