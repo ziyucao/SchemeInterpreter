@@ -1,7 +1,4 @@
-package com.ecnu.basic;
-
-import com.ecnu.fa.FA;
-import com.ecnu.fa.State;
+package com.ecnu.fa;
 
 public class DFARunner {
     private DFA dfa;

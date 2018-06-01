@@ -1,4 +1,4 @@
-package com.ecnu.basic;
+package com.ecnu.fa;
 
 import com.ecnu.algorithm.NfaToDfa;
 import com.ecnu.fa.FA;

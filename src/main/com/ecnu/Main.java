@@ -1,8 +1,8 @@
 package com.ecnu;
 
 import com.ecnu.algorithm.NfaToDfa;
-import com.ecnu.basic.DFA;
-import com.ecnu.basic.DFARunner;
+import com.ecnu.fa.DFA;
+import com.ecnu.fa.DFARunner;
 import com.ecnu.fa.FA;
 import com.ecnu.fa.State;
 import com.ecnu.fa.Transition;
