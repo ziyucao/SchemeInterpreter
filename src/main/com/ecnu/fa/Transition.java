@@ -9,7 +9,7 @@ public class Transition {
     private int toState;
     private char trans;
    
-    Transition (int fromState, int toState, char trans) {
+    public Transition (int fromState, int toState, char trans) {
         this.fromState = fromState;
         this.toState = toState;
         this.trans = trans;

@@ -10,7 +10,7 @@ public class State {
     private boolean isAcceptedState;
     private LinkedList<Transition> transitions;
     
-    State(int stateNumber, boolean isAcceptedState) {
+    public State(int stateNumber, boolean isAcceptedState) {
         this.stateNumber = stateNumber;
         this.isAcceptedState = isAcceptedState;
         this.transitions = new LinkedList<>();
@@ -62,4 +62,20 @@ public class State {
         }
         return null;
     }
+    @Override
+    public boolean equals(Object o)
+	{
+		if (o == null)
+		{
+			return false;
+		}
+		if (o instanceof State)
+		{
+			if (((State) o).getStateNumber() == stateNumber)
+			{
+				return true;
+			}
+		}
+		return false;
+	}
 }

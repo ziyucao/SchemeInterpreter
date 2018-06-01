@@ -9,7 +9,7 @@ import java.util.Collections;
 public class FA {
     private ArrayList<State> states;
 
-    FA(){
+    public FA(){
         states = new ArrayList<>();
     }
 
@@ -22,5 +22,23 @@ public class FA {
         return this.states.get(stateNumber);
     }
 
+    public void print()
+    {
+        for (State s : states)
+        {
+            for (Transition t : s.getTransitions())
+            {
+                System.out.println("[" + t.getFromState() + "] = " + t.getTrans() + " => [" + t.getToState() + "]");
+            }
+        }
 
+        for (State s : states)
+        {
+            if (s.isAcceptedState())
+            {
+                System.out.print(s.getStateNumber() + " ");
+            }
+        }
+        System.out.println();
+    }
 }
