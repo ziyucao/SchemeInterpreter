@@ -29,7 +29,7 @@ public class SchemeIdentifierTest {
      */
     @Test
     public void testGetType() throws Exception {
-        Assert.assertEquals(Type.Identifier, id.getType());
+        Assert.assertEquals(TokenType.Identifier, id.getType());
     }
 
     /**

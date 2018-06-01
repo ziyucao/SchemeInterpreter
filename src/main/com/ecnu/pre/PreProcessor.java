@@ -2,6 +2,9 @@ package com.ecnu.pre;
 
 import java.util.ArrayList;
 
+/**
+ * @author ddl
+ */
 public class PreProcessor {
 
     public static ArrayList preProcess(String input)

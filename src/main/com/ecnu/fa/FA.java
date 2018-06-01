@@ -7,7 +7,16 @@ import java.util.Collections;
  * @author CaoZiyu
  */
 public class FA {
+
     private ArrayList<State> states;
+
+    public ArrayList<State> getStates() {
+        return states;
+    }
+
+    public void setStates(ArrayList<State> states) {
+        this.states = states;
+    }
 
     public FA(){
         states = new ArrayList<>();

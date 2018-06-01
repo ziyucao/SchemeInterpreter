@@ -29,7 +29,7 @@ public class SchemeNumberTest {
      */
     @Test
     public void testGetType() throws Exception {
-        Assert.assertEquals(Type.Number, number.getType());
+        Assert.assertEquals(TokenType.Number, number.getType());
     }
 
     /**

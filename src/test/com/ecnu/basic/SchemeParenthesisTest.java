@@ -29,7 +29,7 @@ public class SchemeParenthesisTest {
      */
     @Test
     public void testGetType() throws Exception {
-        Assert.assertEquals(Type.Parenthesis, parenthesis.getType());
+        Assert.assertEquals(TokenType.Parenthesis, parenthesis.getType());
     }
 
     /**

@@ -8,8 +8,8 @@ public class SchemeIdentifier extends SchemeToken<String>
     }
 
     @Override
-    public Type getType()
+    public TokenType getType()
     {
-        return Type.Identifier;
+        return TokenType.Identifier;
     }
 }

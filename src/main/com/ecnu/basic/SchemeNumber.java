@@ -8,8 +8,8 @@ public class SchemeNumber extends SchemeToken<Integer>
     }
 
     @Override
-    public Type getType()
+    public TokenType getType()
     {
-        return Type.Number;
+        return TokenType.Number;
     }
 }

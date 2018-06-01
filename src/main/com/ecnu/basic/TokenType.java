@@ -1,6 +1,6 @@
 package com.ecnu.basic;
 
-public enum Type {
+public enum TokenType {
     Identifier,
     Number,
     String,

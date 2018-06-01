@@ -9,8 +9,8 @@ public class SchemeQuoted extends SchemeToken<Character>
     }
 
     @Override
-    public Type getType()
+    public TokenType getType()
     {
-        return Type.Quoted;
+        return TokenType.Quoted;
     }
 }

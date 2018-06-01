@@ -9,6 +9,6 @@ public abstract class SchemeToken<T>
         return content;
     }
 
-    public abstract Type getType();
+    public abstract TokenType getType();
 
 }

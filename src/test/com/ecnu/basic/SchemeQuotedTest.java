@@ -29,7 +29,7 @@ public class SchemeQuotedTest {
      */
     @Test
     public void testGetType() throws Exception {
-        Assert.assertEquals(Type.Quoted, quoted.getType());
+        Assert.assertEquals(TokenType.Quoted, quoted.getType());
     }
 
     /**

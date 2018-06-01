@@ -8,8 +8,8 @@ public class SchemeString extends SchemeToken<String>
     }
 
     @Override
-    public Type getType()
+    public TokenType getType()
     {
-        return Type.String;
+        return TokenType.String;
     }
 }

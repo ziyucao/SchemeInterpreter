@@ -1,16 +1,19 @@
 package com.ecnu;
 
 import com.ecnu.algorithm.NfaToDfa;
+import com.ecnu.basic.DFA;
+import com.ecnu.basic.DFARunner;
 import com.ecnu.fa.FA;
 import com.ecnu.fa.State;
 import com.ecnu.fa.Transition;
+
+import java.util.Scanner;
 
 public class Main
 {
     public static void main(String[] args)
     {
         FA nfa = new FA();
-        FA dfa;
 
         State s0 = new State(0, false);
         s0.addTransition(new Transition(0, 1, 'n'));
@@ -46,7 +49,14 @@ public class Main
         State s7 = new State(7, true);
         nfa.addState(s7);
 
-        dfa = NfaToDfa.transform(nfa);
+        DFA dfa = new DFA(NfaToDfa.transform(nfa));
         dfa.print();
+
+        Scanner in = new Scanner(System.in);
+        String input = in.nextLine();
+        DFARunner runner= new DFARunner(dfa, input);
+        System.out.println(runner.run());
+        in.close();
+
     }
 }
