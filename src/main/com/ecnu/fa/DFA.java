@@ -1,6 +1,5 @@
 package com.ecnu.fa;
 
-import com.ecnu.algorithm.NfaToDfa;
 import com.ecnu.fa.element.State;
 import com.ecnu.fa.element.Transition;
 

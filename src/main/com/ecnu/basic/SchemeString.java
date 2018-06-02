@@ -1,6 +1,9 @@
 package com.ecnu.basic;
 
-public class SchemeString extends SchemeToken<String>
+/**
+ * @author CaoZiyu
+ */
+public class SchemeString extends AbstractSchemeToken<String>
 {
     public SchemeString(String content)
     {

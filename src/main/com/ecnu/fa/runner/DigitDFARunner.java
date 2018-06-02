@@ -4,6 +4,9 @@ import com.ecnu.fa.DFA;
 import com.ecnu.fa.element.State;
 import static com.ecnu.algorithm.CharacterChecker.isNumber;
 
+/**
+ * @author ddl
+ */
 public class DigitDFARunner extends DFARunner{
 
     public DigitDFARunner(DFA dfa) {

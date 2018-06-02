@@ -13,16 +13,16 @@ public class FA {
 
     private ArrayList<State> states;
 
+    public FA(){
+        states = new ArrayList<>();
+    }
+
     public ArrayList<State> getStates() {
         return states;
     }
 
     public void setStates(ArrayList<State> states) {
         this.states = states;
-    }
-
-    public FA(){
-        states = new ArrayList<>();
     }
 
     public void addState(State s) {

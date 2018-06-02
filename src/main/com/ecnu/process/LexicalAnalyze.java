@@ -14,15 +14,17 @@ import com.ecnu.fa.runner.DigitDFARunner;
 import com.ecnu.fa.runner.IdentifierDFARunner;
 import com.ecnu.fa.runner.StringDFARunner;
 
+/**
+ * @author ddl
+ */
 public class LexicalAnalyze {
 
-    // TODO: public - >
-    public static DFA identifierCheckDFA;
-    public static DFA binaryCheckDFA;
-    public static DFA octalCheckDFA;
-    public static DFA decimalCheckDFA;
-    public static DFA hexCheckDFA;
-    public static DFA stringCheckDFA;
+    static DFA identifierCheckDFA;
+    static DFA binaryCheckDFA;
+    static DFA octalCheckDFA;
+    static DFA decimalCheckDFA;
+    static DFA hexCheckDFA;
+    static DFA stringCheckDFA;
     DigitDFARunner for_2;
     DigitDFARunner for_8;
     DigitDFARunner for_10;
@@ -167,7 +169,7 @@ public class LexicalAnalyze {
 
     public SchemeList lexical_analyze(ArrayList<String> input)
     {
-        List<SchemeToken> list = new LinkedList<>();
+        List<AbstractSchemeToken> list = new LinkedList<>();
         for (String s : input)
         {
             if (s == null)

@@ -1,6 +1,9 @@
 package com.ecnu.basic;
 
-public abstract class SchemeToken<T>
+/**
+ * @author CaoZiyu
+ */
+public abstract class AbstractSchemeToken<T>
 {
     protected T content;
 

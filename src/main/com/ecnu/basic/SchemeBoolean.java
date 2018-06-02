@@ -1,6 +1,9 @@
 package com.ecnu.basic;
 
-public class SchemeBoolean extends SchemeToken<Boolean> {
+/**
+ * @author CaoZiyu
+ */
+public class SchemeBoolean extends AbstractSchemeToken<Boolean> {
 
     public SchemeBoolean(Boolean content)
     {

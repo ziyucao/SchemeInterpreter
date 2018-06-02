@@ -1,6 +1,6 @@
 package com.ecnu.fa.runner;
 
-import com.ecnu.algorithm.NfaToDfa;
+import com.ecnu.fa.NfaToDfa;
 import com.ecnu.fa.DFA;
 import com.ecnu.fa.FA;
 import com.ecnu.fa.element.State;

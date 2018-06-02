@@ -4,6 +4,9 @@ import com.ecnu.fa.DFA;
 import com.ecnu.fa.element.State;
 import static com.ecnu.algorithm.CharacterChecker.isLetter;
 
+/**
+ * @author ddl
+ */
 public class IdentifierDFARunner extends DFARunner {
 
     public IdentifierDFARunner(DFA dfa)

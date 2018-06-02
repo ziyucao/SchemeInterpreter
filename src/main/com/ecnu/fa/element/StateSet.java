@@ -3,6 +3,9 @@ package com.ecnu.fa.element;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * @author ddl
+ */
 public class StateSet {
 
     private List<State> states;

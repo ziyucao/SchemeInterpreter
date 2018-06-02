@@ -1,6 +1,9 @@
 package com.ecnu.basic;
 
-public class SchemeQuoted extends SchemeToken<Character>
+/**
+ * @author CaoZiyu
+ */
+public class SchemeQuoted extends AbstractSchemeToken<Character>
 {
 
     public SchemeQuoted(Character content)

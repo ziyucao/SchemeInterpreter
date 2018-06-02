@@ -1,9 +1,18 @@
 package com.ecnu.basic;
 
-public class SchemeParenthesis extends SchemeToken<Character>
+/**
+ * @author CaoZiyu
+ */
+public class SchemeParenthesis extends AbstractSchemeToken<Character>
 {
     public static final byte LEFT_PARENTHESIS = 0;
     public static final byte RIGHT_PARENTHESIS = 1;
+
+    public SchemeParenthesis(Character content)
+    {
+        this.content = content;
+    }
+
     public int getParenthesisType() {
         if (this.content.charValue() == '(') {
             return LEFT_PARENTHESIS;
@@ -17,10 +26,7 @@ public class SchemeParenthesis extends SchemeToken<Character>
     }
 
 
-    public SchemeParenthesis(Character content)
-    {
-        this.content = content;
-    }
+
 
     @Override
     public TokenType getType()

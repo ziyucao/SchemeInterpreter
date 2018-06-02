@@ -1,6 +1,5 @@
-package com.ecnu.algorithm;
+package com.ecnu.fa;
 
-import com.ecnu.fa.*;
 import com.ecnu.fa.element.State;
 import com.ecnu.fa.element.StateSet;
 import com.ecnu.fa.element.Transition;
@@ -8,6 +7,9 @@ import com.ecnu.fa.element.Transition;
 import java.util.LinkedList;
 import java.util.List;
 
+/**
+ * @author ddl
+ */
 public class NfaToDfa {
 
     /**

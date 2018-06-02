@@ -1,5 +1,8 @@
 package com.ecnu.algorithm;
 
+/**
+ * @author ddl
+ */
 public class CharacterChecker
 {
 

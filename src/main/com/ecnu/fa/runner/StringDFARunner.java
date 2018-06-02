@@ -6,6 +6,9 @@ import static com.ecnu.algorithm.CharacterChecker.isStringCharacter;
 
 public class StringDFARunner extends DFARunner {
 
+    /**
+     * @author ddl
+     */
     public StringDFARunner(DFA dfa)
     {
         super(dfa);

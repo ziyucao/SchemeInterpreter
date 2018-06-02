@@ -1,6 +1,9 @@
 package com.ecnu.basic;
 
-public class SchemeError extends SchemeToken<String>{
+/**
+ * @author CaoZiyu
+ */
+public class SchemeError extends AbstractSchemeToken<String> {
 
     public SchemeError(String content) {
         this.content = content;

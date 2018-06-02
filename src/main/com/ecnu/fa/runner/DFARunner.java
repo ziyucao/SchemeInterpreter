@@ -3,6 +3,9 @@ package com.ecnu.fa.runner;
 import com.ecnu.fa.DFA;
 import com.ecnu.fa.element.State;
 
+/**
+ * @author CaoZiyu
+ */
 public class DFARunner {
     protected DFA dfa;
     protected String input;
