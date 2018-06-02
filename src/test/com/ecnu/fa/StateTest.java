@@ -1,5 +1,7 @@
 package com.ecnu.fa;
 
+import com.ecnu.fa.element.State;
+import com.ecnu.fa.element.Transition;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.Before;

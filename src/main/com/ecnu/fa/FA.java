@@ -1,7 +1,10 @@
 package com.ecnu.fa;
 
+import com.ecnu.fa.element.State;
+import com.ecnu.fa.element.StateComparator;
+import com.ecnu.fa.element.Transition;
+
 import java.util.ArrayList;
-import java.util.Collections;
 
 /**
  * @author CaoZiyu

@@ -1,9 +1,8 @@
 package com.ecnu.fa;
 
 import com.ecnu.algorithm.NfaToDfa;
-import com.ecnu.fa.FA;
-import com.ecnu.fa.State;
-import com.ecnu.fa.Transition;
+import com.ecnu.fa.element.State;
+import com.ecnu.fa.element.Transition;
 
 public class DFA extends FA {
     public int goToNext(State s, char c) {

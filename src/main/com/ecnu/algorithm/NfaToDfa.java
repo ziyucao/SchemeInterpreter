@@ -1,6 +1,10 @@
 package com.ecnu.algorithm;
 
 import com.ecnu.fa.*;
+import com.ecnu.fa.element.State;
+import com.ecnu.fa.element.StateSet;
+import com.ecnu.fa.element.Transition;
+
 import java.util.LinkedList;
 import java.util.List;
 

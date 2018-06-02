@@ -1,8 +1,8 @@
 package com.ecnu.basic;
 
-public class SchemeNumber extends SchemeToken<Integer>
+public class SchemeNumber extends SchemeToken<Double>
 {
-    public SchemeNumber(Integer content)
+    public SchemeNumber(Double content)
     {
         this.content = content;
     }

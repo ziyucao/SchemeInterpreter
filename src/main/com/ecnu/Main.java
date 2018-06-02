@@ -2,10 +2,10 @@ package com.ecnu;
 
 import com.ecnu.algorithm.NfaToDfa;
 import com.ecnu.fa.DFA;
-import com.ecnu.fa.DFARunner;
+import com.ecnu.fa.runner.DFARunner;
 import com.ecnu.fa.FA;
-import com.ecnu.fa.State;
-import com.ecnu.fa.Transition;
+import com.ecnu.fa.element.State;
+import com.ecnu.fa.element.Transition;
 
 import java.util.Scanner;
 

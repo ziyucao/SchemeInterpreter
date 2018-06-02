@@ -1,8 +1,11 @@
-package com.ecnu.fa;
+package com.ecnu.fa.runner;
+
+import com.ecnu.fa.DFA;
+import com.ecnu.fa.element.State;
 
 public class DFARunner {
-    private DFA dfa;
-    private String input;
+    protected DFA dfa;
+    protected String input;
 
     public DFARunner(DFA dfa, String input) {
         this.dfa = dfa;
