@@ -10,6 +10,8 @@ import com.ecnu.fa.FA;
 import com.ecnu.fa.element.State;
 import com.ecnu.fa.element.Transition;
 import com.ecnu.fa.runner.DigitDFARunner;
+import com.ecnu.fa.runner.IdentifierDFARunner;
+import com.ecnu.fa.runner.StringDFARunner;
 
 public class LexicalAnalyze {
 
@@ -20,6 +22,11 @@ public class LexicalAnalyze {
     static DFA hexCheckDFA;
     static DFA stringCheckDFA;
     DigitDFARunner for_2;
+    DigitDFARunner for_8;
+    DigitDFARunner for_10;
+    DigitDFARunner for_16;
+    IdentifierDFARunner id_runner;
+    StringDFARunner s_runner;
 
     //dfa for identifier check
     static {
@@ -149,6 +156,11 @@ public class LexicalAnalyze {
     public LexicalAnalyze()
     {
         for_2 = new DigitDFARunner(binaryCheckDFA);
+        for_8 = new DigitDFARunner(octalCheckDFA);
+        for_10 = new DigitDFARunner(decimalCheckDFA);
+        for_16 = new DigitDFARunner(hexCheckDFA);
+        id_runner = new IdentifierDFARunner(identifierCheckDFA);
+        s_runner = new StringDFARunner(stringCheckDFA);
     }
 
     public SchemeList lexical_analyze(ArrayList<String> input)
@@ -156,7 +168,11 @@ public class LexicalAnalyze {
         List<SchemeToken> list = new LinkedList<>();
         for (String s : input)
         {
-            if (s.equals("("))
+            if (s == null)
+            {
+                continue;
+            }
+            else if (s.equals("("))
             {
                 list.add(new SchemeParenthesis('(', SchemeParenthesis.LEFT_PARENTHESIS));
             }
@@ -171,10 +187,16 @@ public class LexicalAnalyze {
             else if (s.startsWith("\"") && s.endsWith("\""))
             {
                 String content = s.subSequence(1, s.length() - 2).toString();
-
-                /**
-                 * content jin xing zheng ze pi pei, ke yong fang fa :isStringCharacter()
-                 */
+                s_runner.setInput(content);
+                int end = s_runner.run();
+                if (s_runner.isAccepted(end))
+                {
+                    list.add(new SchemeString(content));
+                }
+                else
+                {
+                    //report error
+                }
             }
             else if (s.startsWith("#"))
             {
@@ -204,12 +226,62 @@ public class LexicalAnalyze {
                 }
                 else
                 {
-                    /**
-                     * pan duan shi fou wei 2 jin zhi, 8 jin zhi, 10 jin zhi huo 16 jin zhi
-                     * ke yong fang fa:
-                     * isBinaryNumber()   isOctalNumber()   isHexNumber()
-                     */
-
+                    if (s.contains("#b"))
+                    {
+                        for_2.setInput(s);
+                        int end = for_2.run();
+                        if (for_2.isAccepted(end))
+                        {
+                            // TODO : Calculate the value of the "scheme number", and replace the "0.0".
+                            list.add(new SchemeNumber(0.0));
+                        }
+                        else
+                        {
+                            //report error
+                        }
+                    }
+                    else if (s.contains("#o"))
+                    {
+                        for_8.setInput(s);
+                        int end = for_8.run();
+                        if (for_8.isAccepted(end))
+                        {
+                            // TODO : Calculate the value of the "scheme number", and replace the "0.0".
+                            list.add(new SchemeNumber(0.0));
+                        }
+                        else
+                        {
+                            //report error
+                        }
+                    }
+                    else if (s.contains("#d"))
+                    {
+                        for_10.setInput(s);
+                        int end = for_10.run();
+                        if (for_10.isAccepted(end))
+                        {
+                            // TODO : Calculate the value of the "scheme number", and replace the "0.0".
+                            list.add(new SchemeNumber(0.0));
+                        }
+                        else
+                        {
+                            //report error
+                        }
+                    }
+                    else
+                    {
+                        for_16.setInput(s);
+                        int end = for_16.run();
+                        if (for_16.isAccepted(end))
+                        {
+                            // TODO : Calculate the value of the "scheme number", and replace the "0.0".
+                            list.add(new SchemeNumber(0.0));
+                        }
+                        else
+                        {
+                            //report error
+                        }
+                    }
                 }
             }
             else if (s.equals("+"))
@@ -226,19 +298,30 @@ public class LexicalAnalyze {
             }
             else if (s.startsWith("+") || s.startsWith("-") || s.startsWith("."))
             {
-                /**
-                 * pan duan shi fou wei 10 jin zhi
-                 * ke yong fang fa:
-                 * isDecimalNumber()
-                 */
+                for_10.setInput(s);
+                int end = for_10.run();
+                if (for_10.isAccepted(end))
+                {
+                    // TODO : Calculate the value of the "scheme number", and replace the "0.0".
+                    list.add(new SchemeNumber(0.0));
+                }
+                else
+                {
+                    //report error
+                }
             }
             else
             {
-                /**
-                 * pan duan shi fou wei biao zhi fu
-                 * ke yong fang fa:
-                 * isLetter()
-                 */
+                id_runner.setInput(s);
+                int end = id_runner.run();
+                if (id_runner.isAccepted(end))
+                {
+                    list.add(new SchemeIdentifier(s));
+                }
+                else
+                {
+                    //report error
+                }
             }
         }
 
