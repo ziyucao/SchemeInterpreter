@@ -21,4 +21,10 @@ public class SchemeList
     {
         this.tokenList = tokenList;
     }
+
+    public void print() {
+        for (SchemeToken st: tokenList) {
+            System.out.println(st.getContent() + " " + st.getType().toString());
+        }
+    }
 }

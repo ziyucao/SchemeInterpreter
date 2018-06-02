@@ -7,5 +7,5 @@ public enum TokenType {
     Quoted,
     Parenthesis,
     Boolean,
-    
+    InvalidCharacter
 }

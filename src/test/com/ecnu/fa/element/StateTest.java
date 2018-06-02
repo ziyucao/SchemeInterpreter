@@ -1,4 +1,4 @@
-package com.ecnu.fa;
+package com.ecnu.fa.element;
 
 import com.ecnu.fa.element.State;
 import com.ecnu.fa.element.Transition;

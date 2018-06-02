@@ -2,7 +2,7 @@ package com.ecnu.fa.runner;
 
 import com.ecnu.fa.DFA;
 import com.ecnu.fa.element.State;
-import static com.ecnu.basic.CharacterChecker.isNumber;
+import static com.ecnu.algorithm.CharacterChecker.isNumber;
 
 public class DigitDFARunner extends DFARunner{
 
@@ -37,7 +37,7 @@ public class DigitDFARunner extends DFARunner{
             if (stateNumber >= 0) {
                 state = getDFa().getState(stateNumber);
                 // for debug
-                System.out.print(""+state.getStateNumber()+" ");
+//                System.out.print("d "+state.getStateNumber()+" ");
             }
             else {
                 return -1;

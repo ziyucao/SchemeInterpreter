@@ -33,7 +33,7 @@ public class DFARunner {
         this.input = input;
     }
 
-    //TODO : int -> Result
+    //TODO : stateNumber:int -> state:Result
 
     public int run(){
         char[] inputCharSeq = input.toCharArray();
@@ -44,7 +44,7 @@ public class DFARunner {
             if (stateNumber >= 0) {
                 state = getDFa().getState(stateNumber);
                 // for debug
-                System.out.print(""+state.getStateNumber()+" ");
+//                System.out.print(""+state.getStateNumber()+" ");
             }
             else {
                 return -1;
@@ -55,6 +55,9 @@ public class DFARunner {
 
     public boolean isAccepted(int stateId)
     {
+        if (stateId < 0) {
+            return false;
+        }
         State s = dfa.getState(stateId);
         return (s != null && s.isAcceptedState());
     }

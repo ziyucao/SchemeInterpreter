@@ -17,7 +17,7 @@ public class SchemeParenthesisTest {
     SchemeParenthesis parenthesis;
     @Before
     public void before() throws Exception {
-        parenthesis = new SchemeParenthesis('(', 0);
+        parenthesis = new SchemeParenthesis('(');
     }
 
     @After

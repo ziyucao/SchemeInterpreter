@@ -1,4 +1,4 @@
-package com.ecnu.basic;
+package com.ecnu.algorithm;
 
 public class CharacterChecker
 {

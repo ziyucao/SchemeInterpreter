@@ -4,19 +4,21 @@ public class SchemeParenthesis extends SchemeToken<Character>
 {
     public static final byte LEFT_PARENTHESIS = 0;
     public static final byte RIGHT_PARENTHESIS = 1;
-    private int parenthesisType;
-
     public int getParenthesisType() {
-        return parenthesisType;
+        if (this.content.charValue() == '(') {
+            return LEFT_PARENTHESIS;
+        }
+        else if (this.content.charValue() == ')') {
+            return RIGHT_PARENTHESIS;
+        }
+        else {
+            return -1;
+        }
     }
 
-    public void setParenthesisType(int pType) {
-        this.parenthesisType = pType;
-    }
 
-    public SchemeParenthesis(Character content, int parenthesisType)
+    public SchemeParenthesis(Character content)
     {
-        this.parenthesisType = parenthesisType;
         this.content = content;
     }
 

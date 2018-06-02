@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
+import com.ecnu.algorithm.CharacterChecker;
 import com.ecnu.basic.*;
 import com.ecnu.fa.DFA;
 import com.ecnu.fa.FA;
@@ -15,12 +16,13 @@ import com.ecnu.fa.runner.StringDFARunner;
 
 public class LexicalAnalyze {
 
-    static DFA identifierCheckDFA;
-    static DFA binaryCheckDFA;
-    static DFA octalCheckDFA;
-    static DFA decimalCheckDFA;
-    static DFA hexCheckDFA;
-    static DFA stringCheckDFA;
+    // TODO: public - >
+    public static DFA identifierCheckDFA;
+    public static DFA binaryCheckDFA;
+    public static DFA octalCheckDFA;
+    public static DFA decimalCheckDFA;
+    public static DFA hexCheckDFA;
+    public static DFA stringCheckDFA;
     DigitDFARunner for_2;
     DigitDFARunner for_8;
     DigitDFARunner for_10;
@@ -174,11 +176,11 @@ public class LexicalAnalyze {
             }
             else if (s.equals("("))
             {
-                list.add(new SchemeParenthesis('(', SchemeParenthesis.LEFT_PARENTHESIS));
+                list.add(new SchemeParenthesis('('));
             }
             else if (s.equals(")"))
             {
-                list.add(new SchemeParenthesis(')', SchemeParenthesis.LEFT_PARENTHESIS));
+                list.add(new SchemeParenthesis(')'));
             }
             else if (s.equals("'") || s.equals("`") || s.equals(",") || s.equals(",@"))
             {
@@ -196,6 +198,7 @@ public class LexicalAnalyze {
                 else
                 {
                     //report error
+                    list.add(new SchemeError(content));
                 }
             }
             else if (s.startsWith("#"))
@@ -229,7 +232,7 @@ public class LexicalAnalyze {
                     if (s.contains("#b"))
                     {
                         for_2.setInput(s);
-                        int end = for_2.run();
+                        int end = for_2.run(2);
                         if (for_2.isAccepted(end))
                         {
                             // TODO : Calculate the value of the "scheme number", and replace the "0.0".
@@ -238,12 +241,13 @@ public class LexicalAnalyze {
                         else
                         {
                             //report error
+                            list.add(new SchemeError(s));
                         }
                     }
                     else if (s.contains("#o"))
                     {
                         for_8.setInput(s);
-                        int end = for_8.run();
+                        int end = for_8.run(8);
                         if (for_8.isAccepted(end))
                         {
                             // TODO : Calculate the value of the "scheme number", and replace the "0.0".
@@ -252,12 +256,13 @@ public class LexicalAnalyze {
                         else
                         {
                             //report error
+                            list.add(new SchemeError(s));
                         }
                     }
                     else if (s.contains("#d"))
                     {
                         for_10.setInput(s);
-                        int end = for_10.run();
+                        int end = for_10.run(10);
                         if (for_10.isAccepted(end))
                         {
                             // TODO : Calculate the value of the "scheme number", and replace the "0.0".
@@ -266,12 +271,13 @@ public class LexicalAnalyze {
                         else
                         {
                             //report error
+                            list.add(new SchemeError(s));
                         }
                     }
                     else
                     {
                         for_16.setInput(s);
-                        int end = for_16.run();
+                        int end = for_16.run(16);
                         if (for_16.isAccepted(end))
                         {
                             // TODO : Calculate the value of the "scheme number", and replace the "0.0".
@@ -280,6 +286,7 @@ public class LexicalAnalyze {
                         else
                         {
                             //report error
+                            list.add(new SchemeError(s));
                         }
                     }
                 }
@@ -296,10 +303,11 @@ public class LexicalAnalyze {
             {
                 list.add(new SchemeIdentifier("..."));
             }
-            else if (s.startsWith("+") || s.startsWith("-") || s.startsWith("."))
+            else if (s.startsWith("+") || s.startsWith("-") || s.startsWith(".")
+                    || CharacterChecker.isDecimalNumber(s.substring(0,1).toCharArray()[0]))
             {
                 for_10.setInput(s);
-                int end = for_10.run();
+                int end = for_10.run(10);
                 if (for_10.isAccepted(end))
                 {
                     // TODO : Calculate the value of the "scheme number", and replace the "0.0".
@@ -308,9 +316,12 @@ public class LexicalAnalyze {
                 else
                 {
                     //report error
+                    list.add(new SchemeError(s));
                 }
+
             }
             else
+            //is identifier
             {
                 id_runner.setInput(s);
                 int end = id_runner.run();
@@ -321,6 +332,7 @@ public class LexicalAnalyze {
                 else
                 {
                     //report error
+                    list.add(new SchemeError(s));
                 }
             }
         }
@@ -539,12 +551,18 @@ public class LexicalAnalyze {
 
             State s35 = new State(35, false);
             s35.addTransition(new Transition(35, 34, 'n'));
-            s35.addTransition(new Transition(35, 36, '#'));
+            s35.addTransition(new Transition(35, 36, 'n'));
             nfa.addState(s35);
 
             State s36 = new State(36, false);
-            s36.addTransition(new Transition(36, 45, 'n'));
+            s36.addTransition(new Transition(36, 63, '#'));
+            s36.addTransition(new Transition(36, 63, 'n'));
             nfa.addState(s36);
+
+            State s63 = new State(63, false);
+            s63.addTransition(new Transition(63, 36, 'n'));
+            s63.addTransition(new Transition(63, 45, 'n'));
+            nfa.addState(s63);
 
             State s37 = new State(37, false);
             s37.addTransition(new Transition(37, 38, '#'));
