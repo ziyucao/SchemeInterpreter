@@ -1,4 +1,4 @@
-package com.ecnu.analyze;
+package com.ecnu.process;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -186,7 +186,7 @@ public class LexicalAnalyze {
             {
                 list.add(new SchemeQuoted(','));
             }
-            else if (s.startsWith("\"") && s.endsWith("\""))
+            else if (s.startsWith("\"") && s.endsWith("\"") && s.length()>=2)
             {
                 String content = s.subSequence(1, s.length() - 2).toString();
                 s_runner.setInput(content);

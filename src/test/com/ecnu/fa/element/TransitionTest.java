@@ -11,7 +11,7 @@ import org.junit.After;
  *
  * @author CaoZiyu
  * @version 1.0
- * @since <analyze>May 30, 2018</analyze>
+ * @since <process>May 30, 2018</process>
  */
 public class TransitionTest
 {

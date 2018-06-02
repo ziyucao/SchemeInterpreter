@@ -23,6 +23,9 @@ public class NfaToDfa {
     {
         FA dfa = new FA();
         List<StateSet> ssList = new LinkedList<>();
+        if (nfa.getStates().isEmpty()) {
+            return nfa;
+        }
         State start = nfa.getState(0);
         ssList.add(get_null_closure(nfa, start.getStateNumber()));
         int stateSum = 0;

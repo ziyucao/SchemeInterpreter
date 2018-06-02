@@ -1,4 +1,4 @@
-package com.ecnu.analyze;
+package com.ecnu.process;
 
 import org.junit.Assert;
 import org.junit.Test;
@@ -7,13 +7,13 @@ import org.junit.After;
 
 import java.util.ArrayList;
 
-import static com.ecnu.analyze.PreProcessor.preProcess;
+import static com.ecnu.process.PreProcessor.preProcess;
 
 /** 
 * PreProcessor Tester. 
 * 
 * @author <Authors name> 
-* @since <analyze>May 30, 2018</analyze>
+* @since <process>May 30, 2018</process>
 * @version 1.0 
 */ 
 public class PreProcessorTest { 
