@@ -7,6 +7,11 @@ public class DFARunner {
     protected DFA dfa;
     protected String input;
 
+    public DFARunner(DFA dfa)
+    {
+        this.dfa = dfa;
+    }
+
     public DFARunner(DFA dfa, String input) {
         this.dfa = dfa;
         this.input = input;
@@ -46,5 +51,11 @@ public class DFARunner {
             }
         }
         return stateNumber;
+    }
+
+    public boolean isAccepted(int stateId)
+    {
+        State s = dfa.getState(stateId);
+        return (s != null && s.isAcceptedState());
     }
 }

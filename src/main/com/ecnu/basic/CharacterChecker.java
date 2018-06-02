@@ -1,6 +1,19 @@
 package com.ecnu.basic;
 
-public class CharacterChecker {
+public class CharacterChecker
+{
+
+    public static boolean isNumber(char c, int base)
+    {
+        switch (base)
+        {
+            case 2: return isBinaryNumber(c);
+            case 8: return isOctalNumber(c);
+            case 10: return isDecimalNumber(c);
+            case 16: return isHexNumber(c);
+            default: return false;
+        }
+    }
 
     public static boolean isBinaryNumber(char c)
     {

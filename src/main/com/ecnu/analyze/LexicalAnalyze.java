@@ -9,10 +9,142 @@ import com.ecnu.fa.DFA;
 import com.ecnu.fa.FA;
 import com.ecnu.fa.element.State;
 import com.ecnu.fa.element.Transition;
+import com.ecnu.fa.runner.DigitDFARunner;
 
 public class LexicalAnalyze {
 
-    public static SchemeList lexical_analyze(ArrayList<String> input)
+    static DFA identifierCheckDFA;
+    static DFA binaryCheckDFA;
+
+    //dfa for identifier check
+    static {
+        FA identifierCheckNFA = new FA();
+
+        State s0 = new State(0, false);
+        s0.addTransition(new Transition(0, 1, '0'));
+        s0.addTransition(new Transition(0, 1, '!'));
+        s0.addTransition(new Transition(0, 1, '$'));
+        s0.addTransition(new Transition(0, 1, '%'));
+        s0.addTransition(new Transition(0, 1, '&'));
+        s0.addTransition(new Transition(0, 1, '*'));
+        s0.addTransition(new Transition(0, 1, '/'));
+        s0.addTransition(new Transition(0, 1, ':'));
+        s0.addTransition(new Transition(0, 1, '<'));
+        s0.addTransition(new Transition(0, 1, '='));
+        s0.addTransition(new Transition(0, 1, '>'));
+        s0.addTransition(new Transition(0, 1, '?'));
+        s0.addTransition(new Transition(0, 1, '~'));
+        s0.addTransition(new Transition(0, 1, '_'));
+        s0.addTransition(new Transition(0, 1, '^'));
+        identifierCheckNFA.addState(s0);
+
+        State s1 = new State(1, true);
+        s1.addTransition(new Transition(1, 1, '0'));
+        s1.addTransition(new Transition(1, 1, '!'));
+        s1.addTransition(new Transition(1, 1, '$'));
+        s1.addTransition(new Transition(1, 1, '%'));
+        s1.addTransition(new Transition(1, 1, '&'));
+        s1.addTransition(new Transition(1, 1, '*'));
+        s1.addTransition(new Transition(1, 1, '/'));
+        s1.addTransition(new Transition(1, 1, ':'));
+        s1.addTransition(new Transition(1, 1, '<'));
+        s1.addTransition(new Transition(1, 1, '='));
+        s1.addTransition(new Transition(1, 1, '>'));
+        s1.addTransition(new Transition(1, 1, '?'));
+        s1.addTransition(new Transition(1, 1, '~'));
+        s1.addTransition(new Transition(1, 1, '_'));
+        s1.addTransition(new Transition(1, 1, '^'));
+        s1.addTransition(new Transition(1, 2, '.'));
+        s1.addTransition(new Transition(1, 2, '+'));
+        s1.addTransition(new Transition(1, 2, '-'));
+        s1.addTransition(new Transition(1, 2, '@'));
+        s1.addTransition(new Transition(1, 2, '1'));
+        identifierCheckNFA.addState(s1);
+
+        State s2 = new State(2, true);
+        s2.addTransition(new Transition(2, 1, '0'));
+        s2.addTransition(new Transition(2, 1, '!'));
+        s2.addTransition(new Transition(2, 1, '$'));
+        s2.addTransition(new Transition(2, 1, '%'));
+        s2.addTransition(new Transition(2, 1, '&'));
+        s2.addTransition(new Transition(2, 1, '*'));
+        s2.addTransition(new Transition(2, 1, '/'));
+        s2.addTransition(new Transition(2, 1, ':'));
+        s2.addTransition(new Transition(2, 1, '<'));
+        s2.addTransition(new Transition(2, 1, '='));
+        s2.addTransition(new Transition(2, 1, '>'));
+        s2.addTransition(new Transition(2, 1, '?'));
+        s2.addTransition(new Transition(2, 1, '~'));
+        s2.addTransition(new Transition(2, 1, '_'));
+        s2.addTransition(new Transition(2, 1, '^'));
+        s2.addTransition(new Transition(2, 2, '.'));
+        s2.addTransition(new Transition(2, 2, '+'));
+        s2.addTransition(new Transition(2, 2, '-'));
+        s2.addTransition(new Transition(2, 2, '@'));
+        s2.addTransition(new Transition(2, 2, '1'));
+        identifierCheckNFA.addState(s2);
+
+        identifierCheckDFA = new DFA(identifierCheckNFA);
+    }
+
+    //dfa for binary number check
+    static {
+        binaryCheckDFA = constructDigitFA(2);
+    }
+
+    //dfa for octal number check
+    {
+        DFA octalCheckDFA = constructDigitFA(8);
+    }
+
+    //dfa for decimal number check
+    {
+        DFA octalCheckDFA = constructDigitFA(10);
+    }
+
+    //dfa for hex number check
+    {
+        DFA hexCheckDFA = constructDigitFA(16);
+    }
+
+    //dfa for string check
+    {
+        FA stringCheckNFA = new FA();
+
+        State s0 = new State(0, false);
+        s0.addTransition(new Transition(0, 1, '\\'));
+        s0.addTransition(new Transition(0, 4, '6'));
+        s0.addTransition(new Transition(0, 5, 'n'));
+        stringCheckNFA.addState(s0);
+
+        State s1 = new State(1, false);
+        s1.addTransition(new Transition(1, 2, '"'));
+        s1.addTransition(new Transition(1, 3, '\\'));
+        stringCheckNFA.addState(s1);
+
+        State s2 = new State(2, false);
+        s2.addTransition(new Transition(2, 5, 'n'));
+        stringCheckNFA.addState(s2);
+
+        State s3 = new State(3, false);
+        s3.addTransition(new Transition(3, 5, 'n'));
+        stringCheckNFA.addState(s3);
+
+        State s4 = new State(4, false);
+        s4.addTransition(new Transition(4, 5, 'n'));
+        stringCheckNFA.addState(s4);
+
+        State s5 = new State(5, true);
+        s5.addTransition(new Transition(5, 0, 'n'));
+        stringCheckNFA.addState(s5);
+    }
+
+    public LexicalAnalyze()
+    {
+        DigitDFARunner for_2 = new DigitDFARunner(binaryCheckDFA);
+    }
+
+    public SchemeList lexical_analyze(ArrayList<String> input)
     {
         List<SchemeToken> list = new LinkedList<>();
         for (String s : input)
@@ -32,6 +164,7 @@ public class LexicalAnalyze {
             else if (s.startsWith("\"") && s.endsWith("\""))
             {
                 String content = s.subSequence(1, s.length() - 2).toString();
+
                 /**
                  * content jin xing zheng ze pi pei, ke yong fang fa :isStringCharacter()
                  */
@@ -123,7 +256,7 @@ public class LexicalAnalyze {
      * @param base
      * @return dfa
      */
-    private DFA constructDigitFA(int base)
+    private static DFA constructDigitFA(int base)
     {
         char c;
         switch (base)
@@ -447,128 +580,5 @@ public class LexicalAnalyze {
         }
 
         return new DFA(nfa);
-    }
-
-    //dfa for identifier check
-    {
-        FA identifierCheckNFA = new FA();
-
-        State s0 = new State(0, false);
-        s0.addTransition(new Transition(0, 1, '0'));
-        s0.addTransition(new Transition(0, 1, '!'));
-        s0.addTransition(new Transition(0, 1, '$'));
-        s0.addTransition(new Transition(0, 1, '%'));
-        s0.addTransition(new Transition(0, 1, '&'));
-        s0.addTransition(new Transition(0, 1, '*'));
-        s0.addTransition(new Transition(0, 1, '/'));
-        s0.addTransition(new Transition(0, 1, ':'));
-        s0.addTransition(new Transition(0, 1, '<'));
-        s0.addTransition(new Transition(0, 1, '='));
-        s0.addTransition(new Transition(0, 1, '>'));
-        s0.addTransition(new Transition(0, 1, '?'));
-        s0.addTransition(new Transition(0, 1, '~'));
-        s0.addTransition(new Transition(0, 1, '_'));
-        s0.addTransition(new Transition(0, 1, '^'));
-        identifierCheckNFA.addState(s0);
-
-        State s1 = new State(1, true);
-        s1.addTransition(new Transition(1, 1, '0'));
-        s1.addTransition(new Transition(1, 1, '!'));
-        s1.addTransition(new Transition(1, 1, '$'));
-        s1.addTransition(new Transition(1, 1, '%'));
-        s1.addTransition(new Transition(1, 1, '&'));
-        s1.addTransition(new Transition(1, 1, '*'));
-        s1.addTransition(new Transition(1, 1, '/'));
-        s1.addTransition(new Transition(1, 1, ':'));
-        s1.addTransition(new Transition(1, 1, '<'));
-        s1.addTransition(new Transition(1, 1, '='));
-        s1.addTransition(new Transition(1, 1, '>'));
-        s1.addTransition(new Transition(1, 1, '?'));
-        s1.addTransition(new Transition(1, 1, '~'));
-        s1.addTransition(new Transition(1, 1, '_'));
-        s1.addTransition(new Transition(1, 1, '^'));
-        s1.addTransition(new Transition(1, 2, '.'));
-        s1.addTransition(new Transition(1, 2, '+'));
-        s1.addTransition(new Transition(1, 2, '-'));
-        s1.addTransition(new Transition(1, 2, '@'));
-        s1.addTransition(new Transition(1, 2, '1'));
-        identifierCheckNFA.addState(s1);
-
-        State s2 = new State(2, true);
-        s2.addTransition(new Transition(2, 1, '0'));
-        s2.addTransition(new Transition(2, 1, '!'));
-        s2.addTransition(new Transition(2, 1, '$'));
-        s2.addTransition(new Transition(2, 1, '%'));
-        s2.addTransition(new Transition(2, 1, '&'));
-        s2.addTransition(new Transition(2, 1, '*'));
-        s2.addTransition(new Transition(2, 1, '/'));
-        s2.addTransition(new Transition(2, 1, ':'));
-        s2.addTransition(new Transition(2, 1, '<'));
-        s2.addTransition(new Transition(2, 1, '='));
-        s2.addTransition(new Transition(2, 1, '>'));
-        s2.addTransition(new Transition(2, 1, '?'));
-        s2.addTransition(new Transition(2, 1, '~'));
-        s2.addTransition(new Transition(2, 1, '_'));
-        s2.addTransition(new Transition(2, 1, '^'));
-        s2.addTransition(new Transition(2, 2, '.'));
-        s2.addTransition(new Transition(2, 2, '+'));
-        s2.addTransition(new Transition(2, 2, '-'));
-        s2.addTransition(new Transition(2, 2, '@'));
-        s2.addTransition(new Transition(2, 2, '1'));
-        identifierCheckNFA.addState(s2);
-
-        DFA identifierCheckDFA = new DFA(identifierCheckNFA);
-    }
-
-    //dfa for binary number check
-    {
-        DFA binaryCheckDFA = constructDigitFA(2);
-    }
-
-    //dfa for octal number check
-    {
-        DFA octalCheckDFA = constructDigitFA(8);
-    }
-
-    //dfa for decimal number check
-    {
-        DFA octalCheckDFA = constructDigitFA(10);
-    }
-
-    //dfa for hex number check
-    {
-        DFA hexCheckDFA = constructDigitFA(16);
-    }
-
-    //dfa for string check
-    {
-        FA stringCheckNFA = new FA();
-
-        State s0 = new State(0, false);
-        s0.addTransition(new Transition(0, 1, '\\'));
-        s0.addTransition(new Transition(0, 4, '6'));
-        s0.addTransition(new Transition(0, 5, 'n'));
-        stringCheckNFA.addState(s0);
-
-        State s1 = new State(1, false);
-        s1.addTransition(new Transition(1, 2, '"'));
-        s1.addTransition(new Transition(1, 3, '\\'));
-        stringCheckNFA.addState(s1);
-
-        State s2 = new State(2, false);
-        s2.addTransition(new Transition(2, 5, 'n'));
-        stringCheckNFA.addState(s2);
-
-        State s3 = new State(3, false);
-        s3.addTransition(new Transition(3, 5, 'n'));
-        stringCheckNFA.addState(s3);
-
-        State s4 = new State(4, false);
-        s4.addTransition(new Transition(4, 5, 'n'));
-        stringCheckNFA.addState(s4);
-
-        State s5 = new State(5, true);
-        s5.addTransition(new Transition(5, 0, 'n'));
-        stringCheckNFA.addState(s5);
     }
 }
