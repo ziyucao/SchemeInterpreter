@@ -15,6 +15,11 @@ public class LexicalAnalyze {
 
     static DFA identifierCheckDFA;
     static DFA binaryCheckDFA;
+    static DFA octalCheckDFA;
+    static DFA decimalCheckDFA;
+    static DFA hexCheckDFA;
+    static DFA stringCheckDFA;
+    DigitDFARunner for_2;
 
     //dfa for identifier check
     static {
@@ -93,22 +98,22 @@ public class LexicalAnalyze {
     }
 
     //dfa for octal number check
-    {
-        DFA octalCheckDFA = constructDigitFA(8);
+    static {
+        octalCheckDFA = constructDigitFA(8);
     }
 
     //dfa for decimal number check
-    {
-        DFA octalCheckDFA = constructDigitFA(10);
+    static {
+        decimalCheckDFA = constructDigitFA(10);
     }
 
     //dfa for hex number check
-    {
-        DFA hexCheckDFA = constructDigitFA(16);
+    static {
+        hexCheckDFA = constructDigitFA(16);
     }
 
     //dfa for string check
-    {
+    static {
         FA stringCheckNFA = new FA();
 
         State s0 = new State(0, false);
@@ -137,11 +142,13 @@ public class LexicalAnalyze {
         State s5 = new State(5, true);
         s5.addTransition(new Transition(5, 0, 'n'));
         stringCheckNFA.addState(s5);
+
+        stringCheckDFA = new DFA(stringCheckNFA);
     }
 
     public LexicalAnalyze()
     {
-        DigitDFARunner for_2 = new DigitDFARunner(binaryCheckDFA);
+        for_2 = new DigitDFARunner(binaryCheckDFA);
     }
 
     public SchemeList lexical_analyze(ArrayList<String> input)
