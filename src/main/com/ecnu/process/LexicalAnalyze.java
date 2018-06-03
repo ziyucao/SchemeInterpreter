@@ -190,7 +190,7 @@ public class LexicalAnalyze {
             }
             else if (s.startsWith("\"") && s.endsWith("\"") && s.length()>=2)
             {
-                String content = s.subSequence(1, s.length() - 2).toString();
+                String content = s.subSequence(1, s.length() - 1).toString();
                 s_runner.setInput(content);
                 int end = s_runner.run();
                 if (s_runner.isAccepted(end))
