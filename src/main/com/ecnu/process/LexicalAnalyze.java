@@ -237,7 +237,6 @@ public class LexicalAnalyze {
                         int end = for_2.run(2);
                         if (for_2.isAccepted(end))
                         {
-                            // TODO : Calculate the value of the "scheme number", and replace the "0.0".
                             list.add(new SchemeNumber(s));
                         }
                         else
@@ -252,7 +251,6 @@ public class LexicalAnalyze {
                         int end = for_8.run(8);
                         if (for_8.isAccepted(end))
                         {
-                            // TODO : Calculate the value of the "scheme number", and replace the "0.0".
                             list.add(new SchemeNumber(s));
                         }
                         else
@@ -267,7 +265,6 @@ public class LexicalAnalyze {
                         int end = for_10.run(10);
                         if (for_10.isAccepted(end))
                         {
-                            // TODO : Calculate the value of the "scheme number", and replace the "0.0".
                             list.add(new SchemeNumber(s));
                         }
                         else
@@ -282,7 +279,6 @@ public class LexicalAnalyze {
                         int end = for_16.run(16);
                         if (for_16.isAccepted(end))
                         {
-                            // TODO : Calculate the value of the "scheme number", and replace the "0.0".
                             list.add(new SchemeNumber(s));
                         }
                         else
@@ -312,7 +308,6 @@ public class LexicalAnalyze {
                 int end = for_10.run(10);
                 if (for_10.isAccepted(end))
                 {
-                    // TODO : Calculate the value of the "scheme number", and replace the "0.0".
                     list.add(new SchemeNumber(s));
                 }
                 else
