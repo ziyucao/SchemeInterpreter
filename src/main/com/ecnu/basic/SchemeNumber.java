@@ -3,9 +3,9 @@ package com.ecnu.basic;
 /**
  * @author CaoZiyu
  */
-public class SchemeNumber extends AbstractSchemeToken<Double>
+public class SchemeNumber extends AbstractSchemeToken<String>
 {
-    public SchemeNumber(Double content)
+    public SchemeNumber(String content)
     {
         this.content = content;
     }

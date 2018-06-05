@@ -17,7 +17,7 @@ public class SchemeNumberTest {
 
     @Before
     public void before() throws Exception {
-        number = new SchemeNumber(-1d);
+        number = new SchemeNumber("1");
     }
 
     @After
@@ -37,7 +37,7 @@ public class SchemeNumberTest {
      */
     @Test
     public void testGetContent() {
-        Assert.assertEquals(-1d, number.getContent().doubleValue(), 1.0E-4);
+        Assert.assertEquals("s", number.getContent());
     }
 
 } 
