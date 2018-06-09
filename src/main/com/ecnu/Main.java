@@ -24,10 +24,11 @@ public class Main {
                 LexicalAnalyze lexicalAnalyze = new LexicalAnalyze();
                 SchemeList list = lexicalAnalyze.lexical_analyze(PreProcessor.preProcess(input));
                 list.print();
-
-                AbPair abPair = SchemeReader.scheme_read(list);
-                System.out.println(abPair.toString());
-                System.out.println((abPair.print()));
+                while(!list.isEmpty()) {
+                    AbPair abPair = SchemeReader.scheme_read(list);
+                    System.out.println(abPair.toString());
+                    System.out.println((abPair.print()));
+                }
             } catch (Exception e) {
                 System.out.println("Error:::"+e.getMessage());
             }

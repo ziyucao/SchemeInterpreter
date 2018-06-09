@@ -57,4 +57,8 @@ public class SchemeList
             System.out.println(st.getContent() + " " + st.getType().toString());
         }
     }
+
+    public boolean isEmpty(){
+        return current_lines.isEmpty();
+    }
 }
