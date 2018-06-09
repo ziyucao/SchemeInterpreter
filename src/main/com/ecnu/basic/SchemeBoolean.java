@@ -15,4 +15,11 @@ public class SchemeBoolean extends AbstractSchemeToken<Boolean> {
     {
         return TokenType.Boolean;
     }
+
+    public String toString(){
+        if(content){
+            return "True";
+        }
+        return "False";
+    }
 }

@@ -15,4 +15,8 @@ public class SchemeIdentifier extends AbstractSchemeToken<String>
     {
         return TokenType.Identifier;
     }
+
+    public String toString(){
+        return content;
+    }
 }

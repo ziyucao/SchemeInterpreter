@@ -13,4 +13,7 @@ public class SchemeError extends AbstractSchemeToken<String> {
     public TokenType getType() {
         return TokenType.InvalidCharacter;
     }
+    public String toString(){
+        return content;
+    }
 }
