@@ -2,6 +2,8 @@ package com.ecnu.primitive;
 
 import com.ecnu.Exception.TypeError;
 import com.ecnu.basic.SchemeBoolean;
+import com.ecnu.basic.SchemeNumber;
+import com.ecnu.basic.SchemeString;
 import com.ecnu.utils.AbPair;
 import com.ecnu.utils.Pair;
 import com.ecnu.utils.nil;
@@ -116,7 +118,7 @@ public class primitive {
 
 //    判断是否是string,强类型语言不用吧。。。
     public static <T> boolean scheme_stringp(T s){
-        if(s!=null&&(s instanceof String)){
+        if(s!=null&&(s instanceof SchemeString)){
             String y=(String) s;
             if(y.substring(0,1)=="\"") return true;
         }
@@ -126,12 +128,12 @@ public class primitive {
 
     public static <T> boolean scheme_symbolp(T x){
 //        return (x instanceof Integer)||(x instanceof Float)&&(!(x instanceof Boolean));
-        return (x instanceof String)&&!scheme_stringp(x);
+        return (x instanceof SchemeString)&&!scheme_stringp(x);
     }
 
     public static <T> boolean scheme_numberp(T x){
 //        return (x instanceof Integer)||(x instanceof Float)&&(!(x instanceof Boolean));
-        return x instanceof Number;
+        return x instanceof SchemeNumber;
     }
 
     public static <T> boolean scheme_integerp(T x){
