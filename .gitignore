@@ -1,5 +1,6 @@
 out/
 .vscode/
+.idea
 .idea/workspace.xml
 .idea/junitgenerator-prj-settings.xml
 .idea/encodings.xml
