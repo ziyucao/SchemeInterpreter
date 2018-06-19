@@ -38,7 +38,9 @@ public class primitive {
     }
 
     public static <T> boolean scheme_truep(T x){
-        return x.equals(true);
+        if(x instanceof Token)
+            return ((Token) x).getToken().equals(true);
+        return false;
     }
     public static <T> boolean scheme_falsep(T x){
         return x.equals(false);
