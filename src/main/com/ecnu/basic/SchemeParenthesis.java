@@ -24,13 +24,18 @@ public class SchemeParenthesis extends AbstractSchemeToken<Character>
             return -1;
         }
     }
-
-
-
-
     @Override
     public TokenType getType()
     {
         return TokenType.Parenthesis;
+    }
+
+    public String toString(){
+        if(getParenthesisType() == LEFT_PARENTHESIS){
+            return "(";
+        }
+        else{
+            return ")";
+        }
     }
 }

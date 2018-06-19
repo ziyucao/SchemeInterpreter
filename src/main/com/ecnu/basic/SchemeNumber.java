@@ -15,4 +15,9 @@ public class SchemeNumber extends AbstractSchemeToken<String>
     {
         return TokenType.Number;
     }
+
+    @Override
+    public String toString(){
+        return content;
+    }
 }

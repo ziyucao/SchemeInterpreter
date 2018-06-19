@@ -16,4 +16,8 @@ public class SchemeQuoted extends AbstractSchemeToken<Character>
     {
         return TokenType.Quoted;
     }
+
+    public String toString(){
+        return "quote";
+    }
 }
