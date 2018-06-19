@@ -23,7 +23,7 @@ public class SchemeBoolean extends AbstractSchemeToken<Boolean> {
         return "False";
     }
     @Override
-    public boolean equles(Object obj){
+    public boolean equals(Object obj){
         if((obj instanceof SchemeBoolean)){
             SchemeBoolean o= (SchemeBoolean) obj;
             return o.getContent().equals(this.content);

@@ -13,6 +13,4 @@ public abstract class AbstractSchemeToken<T>
     }
 
     public abstract TokenType getType();
-
-    public abstract boolean equles(Object obj);
 }
