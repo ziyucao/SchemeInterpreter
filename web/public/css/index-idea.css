@@ -1,0 +1,223 @@
+body{
+    margin:0;
+    background-color: rgb(241, 241, 241);
+}
+input{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+ul, li{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+pre, code{
+    padding: 0;
+    margin: 0;
+}
+.main_bar{
+    position:fixed;
+    z-index: 10;
+    top:0;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 54px;
+    background-color: #95b97c;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+.main_bar_child{
+    height: 22px;
+}
+.main_title{
+    color: #fff;
+    font-weight: bold;
+    font-size: 20px;
+    padding-left: 10px;
+}
+.nav_btn{
+    font-size: 20px;
+    width: 32px;
+    height: 32px;
+    padding: 6px;
+    text-align: center;
+    border-radius: 3px;
+    margin-right: 16px;
+    color: white;
+    box-sizing: border-box;
+}
+#data-list{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    background-color: #95b97c;
+    border-top: 1px solid #fff;
+    margin-top: 10px;
+    text-align: left;
+}
+#data-list li{
+    padding: 10px;
+}
+.nav_title{
+    text-align: center;
+}
+.nav_input{
+    padding-right: 16px;
+    text-align: right;
+}
+.nav_input span{
+    padding-right: 4px;
+    line-height: 22px;
+    font-size: 14px;
+    width: 20px;
+    color: #163ef8;
+}
+.container{
+    position: relative;
+    padding: 5px;
+    margin-top: 55px;
+}
+.console_title{
+    padding: 10px;
+    display: flex;
+    display: -webkit-flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgb(230, 230, 230);
+    line-height: 22px;
+}
+.console_title_btn .console_btn{
+    border-radius: 5px;
+    width: 70px;
+    height: 33px;
+    margin: 0;
+    padding: 7px;
+    font-size: 14px;
+}
+.input_title{
+    margin:0;
+    width: 140px;
+    font-size: 16px;
+    overflow: hidden;
+    text-align: left;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.input_title .title_define{
+    height: 33px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+.code_input, .code_output{
+    display: inline-block;
+    width: 100%;
+    min-height: 250px;
+    border: 1px solid rgb(230, 230, 230);
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+}
+.code_input .tools_bar{
+    display: flex;
+    display: -webkit-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(241, 241, 241);
+}
+.tools_btn{
+    width: 34px;
+    text-align: center;
+    cursor: pointer;
+}
+.tools_btn:hover{
+    background-color: rgba(220,229,239,0.9);
+}
+.console_block{
+    min-height: 250px
+}
+.left_bar{
+    float: left;
+    width: 29px;
+    height: 250px;
+    border-right: 1px solid #ddd;
+    background-color: #f7f7f7;
+}
+.left_bar .btn_console{
+    display: inline-block;
+    width: 29px;
+    height: 29px;
+    padding: 7px;
+}
+.right_bar{
+    margin-left: 31px;
+    overflow: auto;
+    height: 250px;
+}
+.text_input{
+    display: block;
+    width: 100%;
+    min-height: 230px;
+    margin:0;
+    padding:0;
+    border: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    resize: none;
+}
+
+.flex_box{
+    width: 100%;
+    overflow: hidden;
+    display: -moz-box;
+    display: -webkit-box;
+}
+
+.box_item{
+    -webkit-box-flex: 1;
+    text-align: center;
+    box-sizing: border-box;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 33px;
+    padding: 3px;
+    box-sizing: border-box;
+    color: #fff;
+    background-color: #e5eecc;
+}
+
+.select{
+    background-color: #95b97c;
+    box-shadow:2px 2px 3px #aaaaaa;
+}
+
+.console_log{
+    text-align: center;
+    border: 1px solid rgb(230, 230, 230);
+    line-height: 22px;
+}
+
+.main_bar .console_title_btn{
+    display: none;
+}
+
+@media screen and (min-width: 414px) {
+    .code_input, .code_output{
+        max-width: 100%;
+    }
+    .nav_btn{
+        display: none;
+    }
+    .console_title{
+        display: none;
+    }
+    .main_bar .console_title_btn{
+        display: block;
+        margin-right: 20px;
+    }
+}
