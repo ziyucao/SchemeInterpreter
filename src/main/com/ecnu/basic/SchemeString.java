@@ -15,4 +15,8 @@ public class SchemeString extends AbstractSchemeToken<String>
     {
         return TokenType.String;
     }
+
+    public String toString(){
+        return content;
+    }
 }
