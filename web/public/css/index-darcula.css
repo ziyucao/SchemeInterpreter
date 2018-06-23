@@ -23,7 +23,7 @@ pre, code{
     right: 0;
     width: auto;
     height: 54px;
-    background-color: #95b97c;
+    background-color: #454545;
     display: flex;
     display: -webkit-flex;
     justify-content: space-between;
@@ -43,7 +43,7 @@ pre, code{
     font-size: 20px;
     width: 32px;
     height: 32px;
-    padding: 6px;
+    padding: 2px;
     text-align: center;
     border-radius: 3px;
     margin-right: 16px;
@@ -54,9 +54,9 @@ pre, code{
     position: absolute;
     left: 0px;
     right: 0px;
-    background-color: #95b97c;
+    background-color: #454545;
     border-top: 1px solid #626262;
-    margin-top: 10px;
+    margin-top: 7px;
     text-align: left;
 }
 #data-list li{
@@ -93,7 +93,7 @@ pre, code{
     border: 1px solid #626262;
     line-height: 22px;
 }
-.console_title .console_btn{
+.console_title_btn .console_btn{
     border-radius: 5px;
     width: 70px;
     height: 33px;
@@ -165,6 +165,8 @@ pre, code{
     color: #fff;
     padding-left: 2px;
     padding-top: 3px;
+    overflow-x: auto;
+    overflow-y: auto;
 }
 .text_input{
     display: block;
@@ -195,11 +197,12 @@ pre, code{
     padding: 3px;
     box-sizing: border-box;
     color: #fff;
-    background-color: #e5eecc;
+    background-color: #218868;
+    cursor: pointer
 }
 
 .select{
-    background-color: #95b97c;
+    background-color: #454545;
     box-shadow:2px 2px 3px #aaaaaa;
 }
 
@@ -212,10 +215,37 @@ pre, code{
 .main_bar .console_title_btn{
     display: none;
 }
+.left_main_bar{
+    display: none;
+}
+.console_inner_title{
+    display: none;
+}
+.console_block{
+    display: none;
+    border: none;
+}
+table{
+    width: 100%;
+    border: none;
+}
+td
+{
+    white-space: nowrap;
+}
+.right_bar table tr{
+    background-color: #2b2b2b;
+}
+.right_bar table tr td{
+    color: #fff;
+}
+.right_bar table tr:nth-child(2n){
+
+}
 
 @media screen and (min-width: 414px) {
     .code_input, .code_output{
-        width: 100%;
+        max-width: 100%;
     }
     .nav_btn{
         display: none;
@@ -226,5 +256,59 @@ pre, code{
     .main_bar .console_title_btn{
         display: block;
         margin-right: 20px;
+    }
+    .left_main_bar{
+        display: block;
+        position: fixed;
+        top: 54px;
+        left: 0;
+        bottom: 0;
+        width: 170px;
+        padding: 5px 10px;
+        border-top: 1px solid #fff;
+        background-color: #454545;
+        color: #fff;
+        z-index: 10;
+    }
+    #data-list{
+        border-top: none;
+        cursor: pointer
+    }
+    #data-list li:hover{
+        background-color: #458B74;
+    }
+    .container{
+        margin-left: 171px;
+    }
+    .code_output{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    .console_block{
+        display: block;
+        width: 520px;
+        margin-bottom: 20px;
+        border-right: 2px solid #616161;
+        border-bottom: 3px solid #616161;
+        box-shadow: 1px 1px 1px #616161;
+        box-sizing: border-box;
+    }
+    .console_block:nth-child(2n+1){
+        margin-right: 45px;
+    }
+    .footer{
+        display: none;
+    }
+    .console_inner_title{
+        display: block;
+        background-color: #218868;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 0;
+        padding-left: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
     }
 }

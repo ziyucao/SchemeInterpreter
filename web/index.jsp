@@ -7,7 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" import="java.util.*" pageEncoding="GBK" %>
 
-<!DOCTYPE HTML>
+<!doctype html>
 <html>
 <head>
   <meta charset="UTF-8">
@@ -19,81 +19,59 @@
   <link rel="stylesheet" href="public/codemirror/theme/darcula.css">
   <link rel="stylesheet" href="public/codemirror/theme/idea.css">
   <link id="theme" rel="stylesheet" href="public/css/index-idea.css">
-  <script src="public/controller/utils.js"></script>
   <script src="public/js/vendor/jquery.js"></script>
   <script src="public/js/vendor/what-input.js"></script>
   <script src="public/js/vendor/foundation.min.js"></script>
   <script src="public/codemirror/lib/codemirror.js"></script>
   <script src="public/codemirror/mode/scheme/scheme.js"></script>
-  <script type="text/javascript">
-      $(function($) {
-          $("#record").append("当前测试页面完成加载。<br/>");
-      });
-      function getFirstFloorValue(element) {
-          $("#record").append("<br/>获取到信息：您将要取得第一级选项信息……");
-          $("#record").append("<br/>正在使用ajax为您获取数据，您可以继续停留在页面并进行其他操作。");
-          $.ajax({
-              url : "value.get",
-              type : "POST",
-              data : "action=GetFirstFloorValue",
-              datatype : "json",
-              success : function(data) {
-                  $("#record").append("<br/>操作成功，正在为您准备数据……");
-                  $(element).empty();
-                  $("#record").append("<br/>清除原始数据成功！");
-                  var ops = $.parseJSON(data);
-                  $("#record").append("<br/>即时数据准备成功！");
-                  for ( var i = 0; i < ops.length; i++)
-                      $(element).append(
-                          "<option value=\"" + ops[i] + "\">" + ops[i]
-                          + "</option>");
-                  $("#record").append("<br/>更新列表成功！<br/>");
-              }
-          });
-
-          // 相比之下，此方法比上面的方法更加简洁，上面的方法具有更好的可控性
-          /*$.getJSON("value.get", {
-              "action" : "GetFirstFloorValue"
-          }, function(data) {
-              var ml = "";
-              $(data).each(function(i) {
-                  ml += "<option value="+ data[i] +">" + data[i] + "</option>";
-              });
-              $(element).html(ml);
-          });*/
-      }
-  </script>
+  <script src="public/js/echarts.js"></script>
+  <script src="public/js/echarts-gl.js"></script>
 </head>
 <body>
 <div class="main_bar">
   <div class="main_title">Scheme在线编译</div>
   <div class="console_title_btn">
-    <span class="button warning console_btn clear_input">清空</span>
-    <span class="button success console_btn run_input">运行</span>
+    <span class="button warning console_btn clear_input" id="clear_input">清空</span>
+    <span class="button success console_btn run_input" id="run_input">运行</span>
   </div>
   <div class="main_bar_child nav_btn">
     <i class="fa fa-align-justify" id="nav_btn"></i>
     <ul id="data-list" style="display: none">
-      <li>Scheme语法说明</li>
+      <li><a href="https://www.scheme.com/tspl4/" style="text-decoration:none; color:#fff;">Scheme语法说明</a></li>
       <li style="position: relative;">
         夜间模式
         <form style="position: absolute; right: 8px; top:10px;">
           <div class="switch round tiny">
-            <input id="mySwitch" type="checkbox">
+            <input id="mySwitch" class="mySwitch" type="checkbox">
             <label for="mySwitch"></label>
           </div>
         </form>
       </li>
-      <li>关于我们</li>
+      <li><a href="https://github.com/ziyucao/SchemeInterpreter" style="text-decoration:none; color:#fff;">关于我们</a></li>
     </ul>
   </div>
+</div>
+<div class="left_main_bar">
+  <ul id="data-list">
+    <li><a href="https://www.scheme.com/tspl4/" style="text-decoration:none; color:#fff;">Scheme语法说明</a></li>
+    <li style="position: relative;">
+      夜间模式
+      <form style="position: absolute; right: 8px; top:11px;">
+        <div class="switch round tiny">
+          <input id="mySwitch_nex" class="mySwitch" type="checkbox">
+          <label for="mySwitch_nex"></label>
+        </div>
+      </form>
+    </li>
+    <li><a href="https://github.com/ziyucao/SchemeInterpreter" style="text-decoration:none; color:#fff;">关于我们</a></li>
+  </ul>
 </div>
 <div class="container">
   <div class="console_title">
     <p class="input_title" onclick="ShowElement(this)">请输入文件名</p>
     <div class="console_title_btn">
-      <span class="button warning console_btn clear_input">清空</span>
-      <span class="button success console_btn run_input">运行</span>
+      <span class="button warning console_btn clear_input" id="clear_input">清空</span>
+      <span class="button success console_btn run_input" id="run_input">运行</span>
     </div>
   </div>
   <div class="code_input">
@@ -115,59 +93,39 @@
   </div>
   <div class="console_log">Console Log</div>
   <div class="code_output">
+    <div class="console_block" id="yufa" style="display: block;">
+      <div class="console_inner_title">语法分析</div>
+      <div class="left_bar">
+        <i class="fa fa-trash btn_console"></i>
+      </div>
+      <div class="right_bar" id="yufa_tree"></div>
+    </div>
     <div class="console_block" id="cifa">
+      <div class="console_inner_title">词法分析</div>
       <div class="left_bar">
         <i class="fa fa-trash btn_console"></i>
-        <i class="fa fa-expand btn_console"></i>
       </div>
-      <div class="right_bar">
-        (<br>
-        a<br>
-        1<br>
-        )<br>
-      </div>
+      <div class="right_bar"></div>
     </div>
-    <div class="console_block" id="yufa" style="display: none;">
+    <div class="console_block" id="cuowu">
+      <div class="console_inner_title">错误处理</div>
       <div class="left_bar">
         <i class="fa fa-trash btn_console"></i>
-        <i class="fa fa-expand btn_console"></i>
       </div>
-      <div class="right_bar">
-        (<br>
-        a<br>
-        1<br>
-        )<br>
-      </div>
+      <div class="right_bar"></div>
     </div>
-    <div class="console_block" id="yuyi" style="display: none;">
+    <div class="console_block" id="jieguo">
+      <div class="console_inner_title">代码结果</div>
       <div class="left_bar">
         <i class="fa fa-trash btn_console"></i>
-        <i class="fa fa-expand btn_console"></i>
       </div>
-      <div class="right_bar">
-        (<br>
-        a<br>
-        1<br>
-        )<br>
-      </div>
-    </div>
-    <div class="console_block" id="jieguo" style="display: none;">
-      <div class="left_bar">
-        <i class="fa fa-trash btn_console"></i>
-        <i class="fa fa-expand btn_console"></i>
-      </div>
-      <div class="right_bar">
-        (<br>
-        a<br>
-        1<br>
-        )<br>
-      </div>
+      <div class="right_bar"></div>
     </div>
   </div>
   <div class="footer flex_box">
-    <div class="box_item select" data-block="cifa">词法分析</div>
-    <div class="box_item" data-block="yufa">语法分析</div>
-    <div class="box_item" data-block="yuyi">语义分析</div>
+    <div class="box_item select" data-block="yufa">语法分析</div>
+    <div class="box_item" data-block="cifa">词法分析</div>
+    <div class="box_item" data-block="cuowu">错误处理</div>
     <div class="box_item" data-block="jieguo">代码结果</div>
   </div>
 </div>
@@ -177,4 +135,5 @@
 </script>
 </body>
 </html>
+
 

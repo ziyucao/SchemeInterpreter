@@ -43,7 +43,7 @@ pre, code{
     font-size: 20px;
     width: 32px;
     height: 32px;
-    padding: 6px;
+    padding: 2px;
     text-align: center;
     border-radius: 3px;
     margin-right: 16px;
@@ -56,7 +56,7 @@ pre, code{
     right: 0px;
     background-color: #95b97c;
     border-top: 1px solid #fff;
-    margin-top: 10px;
+    margin-top: 7px;
     text-align: left;
 }
 #data-list li{
@@ -139,6 +139,7 @@ pre, code{
     background-color: rgba(220,229,239,0.9);
 }
 .console_block{
+    display: none;
     min-height: 250px
 }
 .left_bar{
@@ -158,6 +159,7 @@ pre, code{
     margin-left: 31px;
     overflow: auto;
     height: 250px;
+    width: 320px;
 }
 .text_input{
     display: block;
@@ -170,7 +172,6 @@ pre, code{
     box-sizing: border-box;
     resize: none;
 }
-
 .flex_box{
     width: 100%;
     overflow: hidden;
@@ -189,6 +190,7 @@ pre, code{
     box-sizing: border-box;
     color: #fff;
     background-color: #e5eecc;
+    cursor: pointer
 }
 
 .select{
@@ -206,6 +208,25 @@ pre, code{
     display: none;
 }
 
+.left_main_bar{
+    display: none;
+}
+.console_inner_title{
+    display: none;
+}
+.console_block{
+    display: none;
+}
+table{
+    width: 100%;
+    border:none;
+}
+td
+{
+    white-space: nowrap;
+}
+
+
 @media screen and (min-width: 414px) {
     .code_input, .code_output{
         max-width: 100%;
@@ -219,5 +240,63 @@ pre, code{
     .main_bar .console_title_btn{
         display: block;
         margin-right: 20px;
+    }
+    .left_main_bar{
+        display: block;
+        position: fixed;
+        top: 54px;
+        left: 0;
+        bottom: 0;
+        width: 170px;
+        padding: 5px 10px;
+        border-top: 1px solid #fff;
+        background-color: #95b97c;
+        color: #fff;
+        z-index: 10;
+    }
+    #data-list{
+        border-top: none;
+        cursor: pointer
+    }
+    #data-list li:hover{
+        background-color: #458B74;
+    }
+    .container{
+        margin-left: 171px;
+    }
+    .code_output{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+    .console_block{
+        display: block;
+        width: 520px;
+        margin-bottom: 20px;
+        border-right: 2px solid #f4f4f4;
+        border-bottom: 3px solid #f4f4f4;
+        box-shadow: 1px 1px 1px #f4f4f4;
+        box-sizing: border-box;
+    }
+    .console_block:nth-child(2n+1){
+        margin-right: 45px;
+    }
+    .footer{
+        display: none;
+    }
+    .console_inner_title{
+        display: block;
+        background-color: #95b97c;
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 0;
+        padding-left: 5px;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+    .console_log{
+        height: 40px;
+        padding: 7px;
     }
 }

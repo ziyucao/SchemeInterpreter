@@ -41,11 +41,11 @@ var editor = CodeMirror.fromTextArea($('#code_input')[0], {
     lineWrapping: true
 });
 editor.setOption("mode", "scheme");
-editor.setValue('(a 1)');
+editor.setValue('( define a 1 )');
 
 //主题更换
-$('#mySwitch').on('click', function(){
-   var $switch = $(this);
+$('.mySwitch').on('click', function(){
+    var $switch = $(this);
     if($switch.prop('checked') == true){
         var editor_value = editor.getValue();
         $('.CodeMirror').remove();
@@ -77,6 +77,64 @@ $('#mySwitch').on('click', function(){
     }
 });
 
+//词法生成
+function showToken(tokenList){
+    var myToken = $('#cifa .right_bar');
+    myToken[0].innerText = '';
+    myToken.append("<table></table>");
+    var table = myToken.find('table');
+    for(var i = 0; i < tokenList.length; i++){
+        var str = tokenList[i]['str'],
+            type = tokenList[i]['type'];
+        var node = "<tr>"+"<td>"+str+"</td>"+"<td>"+type+"</td>"+"</tr>";
+        table.append(node);
+    }
+}
+
+//语法树绘制
+var myChart;
+function showTree(myChart, tree){
+    myChart.hideLoading();
+    myChart.setOption(option = {
+        tooltip: {
+            trigger: 'item',
+            triggerOn: 'mousemove'
+        },
+        series:[
+            {
+                type: 'tree',
+                data: [tree],
+                left: '2%',
+                right: '2%',
+                top: '8%',
+                bottom: '20%',
+                symbol: 'emptyCircle',
+                orient: 'vertical',
+                expandAndCollapse: true,
+                label: {
+                    normal: {
+                        position: 'top',
+                        rotate: -90,
+                        verticalAlign: 'middle',
+                        align: 'right',
+                        fontSize: 9
+                    }
+                },
+                leaves: {
+                    label: {
+                        normal: {
+                            position: 'bottom',
+                            rotate: -90,
+                            verticalAlign: 'middle',
+                            align: 'left'
+                        }
+                    }
+                },
+                animationDurationUpdate: 750
+            }
+        ]
+    });
+}
 
 //按键事件
 $('.tools_btn').bind('click', function() {
@@ -86,35 +144,60 @@ $('.tools_btn').bind('click', function() {
     editor.setValue(code_str + tag);
 });
 $('.run_input').bind('click', function() {
+    $('.console_block').hide();
+    $('#yufa').show(500);
+    var $box_item = $('.box_item');
+    $box_item.removeClass('select');
+    $($box_item[0]).addClass('select');
+
     var $view = $(this).parents('body'),
         $output = $('.console_block .right_bar'),
-        $code_input = editor.getValue();
-    var code = {
-        "code_input": $code_input
-    };
+        code = editor.getValue();
+
     $.ajax({
         type: "POST",
         data: code,
-        url: "",
+        url: "http://182.254.220.56:8080/Scheme/scheme",
         success:function(data){
+            data = JSON.parse(data);
+            if(data.ErrorInfo){
+                var errInfo = data.ErrorInfo;
+                $output[2].innerText = errInfo;
+                $('.console_block').hide();
+                $box_item.removeClass('select');
+                $($box_item[3]).addClass('select');
+                $('#cuowu').show(500);
+            } else {
+                $output[2].innerText = "No Error，All code accepted.";
+            }
+            if(data.errPos){
+                var errPos = data.ErrorPosition;
+            }
+            var result = data.Result,
+                scheme_result = data.SchemeResult,
+                tokenList = data.TokenList,
+                tree = data.tree;
+            $output[3].innerText = result;
 
+            if (myChart != null && myChart != "" && myChart != undefined) {
+                myChart.dispose();
+            }
+            myChart = echarts.init(document.getElementById('yufa_tree'));
+            myChart.showLoading();
+            showToken(tokenList);
+            showTree(myChart, tree);
         },
         error:function(){
             alert("输出出错！")
         }
     });
-
-    $output[0].innerText = editor.getValue();
-    $output[1].innerText = editor.getValue();
-    $output[2].innerText = editor.getValue();
-    $output[3].innerText = editor.getValue();
 });
 $('.clear_input').bind('click', function() {
     var $view = $(this).parents('body'),
         $output = $('.console_block .right_bar');
     editor.setValue('');
     for(var i = 0; i < 4; i++){
-        $output[i].innerText = '';
+        $output[i].innerHTML = '';
     }
 });
 $('.box_item').bind('click', function() {
@@ -132,6 +215,6 @@ $('.btn_console').bind('click', function() {
         $output = $('.console_block .right_bar'),
         $btn = $(this);
     for(var i = 0; i < 4; i++){
-        $output[i].innerText = '';
+        $output[i].innerHTML = '';
     }
 });
