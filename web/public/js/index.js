@@ -144,8 +144,10 @@ $('.tools_btn').bind('click', function() {
     editor.setValue(code_str + tag);
 });
 $('.run_input').bind('click', function() {
-    $('.console_block').hide();
-    $('#yufa').show(500);
+    if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+        $('.console_block').hide();
+        $('#yufa').show(500);
+    }
     var $box_item = $('.box_item');
     $box_item.removeClass('select');
     $($box_item[0]).addClass('select');
@@ -163,10 +165,12 @@ $('.run_input').bind('click', function() {
             if(data.ErrorInfo){
                 var errInfo = data.ErrorInfo;
                 $output[2].innerText = errInfo;
-                $('.console_block').hide();
-                $box_item.removeClass('select');
-                $($box_item[3]).addClass('select');
-                $('#cuowu').show(500);
+                if(/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+                    $('.console_block').hide();
+                    $box_item.removeClass('select');
+                    $($box_item[3]).addClass('select');
+                    $('#cuowu').show(500);
+                }
             } else {
                 $output[2].innerText = "No Error，All code accepted.";
             }

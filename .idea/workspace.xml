@@ -6,8 +6,9 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b7d66578-d7a9-4b25-aa1d-25b48d3941b5" name="Default" comment="">
+    <list default="true" id="b7d66578-d7a9-4b25-aa1d-25b48d3941b5" name="Default" comment="[BugFix] 上传缺少的JS文件。">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/public/js/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/web/public/js/index.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -49,7 +50,7 @@
       <file leaf-file-name="index-idea.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/public/css/index-idea.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
+            <state relative-caret-position="81">
               <caret line="285" column="22" selection-start-line="285" selection-start-column="22" selection-end-line="285" selection-end-column="22" />
             </state>
           </provider>
@@ -64,11 +65,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+            <state relative-caret-position="-857">
+              <caret line="65" column="37" lean-forward="true" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
             </state>
           </provider>
         </entry>
@@ -89,11 +90,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/public/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="162" column="31" lean-forward="true" selection-start-line="162" selection-start-column="31" selection-end-line="162" selection-end-column="31" />
+            <state relative-caret-position="258">
+              <caret line="169" column="52" lean-forward="true" selection-start-line="169" selection-start-column="52" selection-end-line="169" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -195,9 +196,9 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="445" />
+    <option name="x" value="254" />
     <option name="y" value="22" />
-    <option name="width" value="835" />
+    <option name="width" value="1026" />
     <option name="height" value="731" />
   </component>
   <component name="ProjectLevelVcsManager">
@@ -232,6 +233,36 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="public" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchemeInterpreter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchemeInterpreter" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchemeInterpreter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchemeInterpreter" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchemeInterpreter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchemeInterpreter" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SchemeInterpreter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SchemeInterpreter" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
+              <item name="classes" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="ecnu" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SchemeInterpreter" type="b2602c69:ProjectViewProjectNode" />
@@ -594,7 +625,7 @@
       <workItem from="1529389287614" duration="3627000" />
       <workItem from="1529455320795" duration="495000" />
       <workItem from="1529721543522" duration="443000" />
-      <workItem from="1529905537744" duration="937000" />
+      <workItem from="1529905537744" duration="2608000" />
     </task>
     <task id="LOCAL-00001" summary="FA部分实现">
       <created>1527676417411</created>
@@ -638,7 +669,14 @@
       <option name="project" value="LOCAL" />
       <updated>1529769980569</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="[BugFix] 上传缺少的JS文件。">
+      <created>1529906771984</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1529906771984</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -674,7 +712,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31573000" />
+    <option name="totallyTimeSpent" value="33244000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -686,7 +724,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="445" y="22" width="835" height="731" extended-state="0" />
+    <frame x="254" y="22" width="1026" height="731" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
@@ -696,7 +735,7 @@
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info anchor="right" id="Database" order="3" weight="0.32962668" />
-      <window_info id="Structure" order="1" sideWeight="0.26644737" side_tool="true" visible="true" weight="0.3631778" />
+      <window_info id="Structure" order="1" sideWeight="0.26451612" side_tool="true" visible="true" weight="0.29268292" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.24980143" />
       <window_info id="UI Designer" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3989071" />
@@ -706,10 +745,10 @@
       <window_info id="Image Layers" order="2" />
       <window_info anchor="bottom" id="Java Enterprise" order="8" weight="0.329653" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.38012618" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="7" visible="true" weight="0.5205047" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2665615" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.27287066" />
       <window_info anchor="bottom" id="Terminal" order="7" weight="0.329653" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.73355263" visible="true" weight="0.3631778" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.7354839" visible="true" weight="0.29268292" />
       <window_info id="Web" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.5669399" />
       <window_info anchor="right" id="Theme Preview" order="3" />
@@ -761,7 +800,8 @@
     <MESSAGE value="fix directory" />
     <MESSAGE value="fix package" />
     <MESSAGE value="[WebNew] 系统完成，支持手机、PC端显示。" />
-    <option name="LAST_COMMIT_MESSAGE" value="[WebNew] 系统完成，支持手机、PC端显示。" />
+    <MESSAGE value="[BugFix] 上传缺少的JS文件。" />
+    <option name="LAST_COMMIT_MESSAGE" value="[BugFix] 上传缺少的JS文件。" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -959,24 +999,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/public/css/index-idea.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret line="285" column="22" selection-start-line="285" selection-start-column="22" selection-end-line="285" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/public/css/index-darcula.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4440">
           <caret line="296" column="5" selection-start-line="296" selection-start-column="5" selection-end-line="296" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/public/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="162" column="31" lean-forward="true" selection-start-line="162" selection-start-column="31" selection-end-line="162" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -999,10 +1025,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/public/css/index-idea.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="285" column="22" selection-start-line="285" selection-start-column="22" selection-end-line="285" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+        <state relative-caret-position="-857">
+          <caret line="65" column="37" lean-forward="true" selection-start-line="65" selection-start-column="37" selection-end-line="65" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/public/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="169" column="52" lean-forward="true" selection-start-line="169" selection-start-column="52" selection-end-line="169" selection-end-column="52" />
         </state>
       </provider>
     </entry>
