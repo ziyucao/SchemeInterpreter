@@ -114,17 +114,15 @@ function showTree(myChart, tree){
                 label: {
                     normal: {
                         position: 'top',
-                        rotate: -90,
                         verticalAlign: 'middle',
                         align: 'right',
-                        fontSize: 9
+                        fontSize: 10
                     }
                 },
                 leaves: {
                     label: {
                         normal: {
                             position: 'bottom',
-                            rotate: -90,
                             verticalAlign: 'middle',
                             align: 'left'
                         }
