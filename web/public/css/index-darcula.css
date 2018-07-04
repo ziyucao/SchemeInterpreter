@@ -296,7 +296,7 @@ td
         box-sizing: border-box;
     }
     .console_block:nth-child(2n+1){
-        margin-right: 45px;
+        margin-right: 0px;
     }
     .footer{
         display: none;

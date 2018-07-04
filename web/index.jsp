@@ -12,7 +12,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <title>Scheme在线编译</title>
+  <title>Scheme在线解释器</title>
   <link rel="stylesheet" href="public/css/font-awesome.css">
   <link rel="stylesheet" href="https://cdn.bootcss.com/foundation/5.5.3/css/foundation.min.css">
   <link rel="stylesheet" href="public/codemirror/lib/codemirror.css">
@@ -29,7 +29,7 @@
 </head>
 <body>
 <div class="main_bar">
-  <div class="main_title">Scheme在线编译</div>
+  <div class="main_title">Scheme在线解释器</div>
   <div class="console_title_btn">
     <span class="button warning console_btn clear_input" id="clear_input">清空</span>
     <span class="button success console_btn run_input" id="run_input">运行</span>

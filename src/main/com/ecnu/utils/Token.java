@@ -7,6 +7,12 @@ public class Token extends AbPair {
     public Token(AbstractSchemeToken token){
         this.token = token;
     }
+
+    public AbstractSchemeToken getToken()
+    {
+        return token;
+    }
+
     public String toString(){
         return token.toString();
     }

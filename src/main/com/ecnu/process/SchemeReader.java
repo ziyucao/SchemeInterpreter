@@ -19,7 +19,7 @@ public class SchemeReader {
         } else if (val.getType().equals(TokenType.Parenthesis) && ((SchemeParenthesis) (val)).getParenthesisType() == SchemeParenthesis.LEFT_PARENTHESIS) {
             return read_tail(src);
         } else if (val.getType().equals(TokenType.Quoted)) {
-            return new Pair(new Token(val), new Pair(scheme_read(src), nil.getInstance()));
+            return new Token(val);
         } else if (!CompareDelimiter.isDelimiter(val.toString())) {
             return new Token(val);
         } else {

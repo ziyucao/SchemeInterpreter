@@ -334,7 +334,7 @@ public class LexicalAnalyze {
             }
         }
 
-        return new SchemeList(list);
+        return new SchemeList(list,input);
     }
 
     {

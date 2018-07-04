@@ -18,8 +18,8 @@ public class SchemeBoolean extends AbstractSchemeToken<Boolean> {
 
     public String toString(){
         if(content){
-            return "True";
+            return "#t";
         }
-        return "False";
+        return "#f";
     }
 }

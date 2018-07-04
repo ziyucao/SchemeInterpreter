@@ -1,10 +1,16 @@
 package com.ecnu.utils;
 
 import com.ecnu.Exception.TypeError;
+import com.ecnu.basic.SchemeList;
 import com.ecnu.basic.SchemeNumber;
+import com.ecnu.process.SchemeReader;
 import com.sun.xml.internal.ws.api.pipe.helper.PipeAdapter;
 
 import java.io.PipedReader;
+import java.util.ArrayList;
+import java.util.List;
+
+import static com.ecnu.process.Eval.scheme_eval;
 
 public class Pair extends AbPair{
     private AbPair first;
@@ -59,6 +65,8 @@ public class Pair extends AbPair{
         return result;
     }
 
+
+
     public String print() {
         String result = "(" + this.first.print();
         AbPair second = this.second;
@@ -73,6 +81,8 @@ public class Pair extends AbPair{
         }
         return result + ")";
     }
+
+
 
     public AbPair getFirst(){
         return first;
