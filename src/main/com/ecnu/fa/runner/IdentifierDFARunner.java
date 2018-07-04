@@ -33,8 +33,6 @@ public class IdentifierDFARunner extends DFARunner {
             stateNumber = dfa.goToNext(state, c);
             if (stateNumber >= 0) {
                 state = getDFa().getState(stateNumber);
-                // for debug
-//                System.out.print("i "+state.getStateNumber()+" ");
             }
             else {
                 return -1;
